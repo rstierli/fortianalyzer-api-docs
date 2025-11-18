@@ -1,0 +1,1363 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SD-WAN Interface Health Overview &#8212; Project name not set 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/lightbox.min.css?v=6e7d0de0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../_static/js/lightbox2-options.js?v=b4db3a7c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/fortiviewsecure-sd-wan/create-task-sd-wan-health-overview';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SD-WAN Application Usage" href="create-task-sd-wan-application.html" />
+    <link rel="prev" title="Fetch Top Threats Results by Task ID" href="../fortiviewtop-threats/fetch-result-by-task.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Nov 18, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-light" alt="Project name not set 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-dark" alt="Project name not set 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/authentication.html">Authentication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Authentication</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/login.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/logout.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortianalyzercloudlogin/forticloud-token.html">FortiCloud Token Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortianalyzercloudlogin/get-session-id.html">Get Session ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device Manager (15 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-epid.html">Get UEBA Endpoints by Endpoint ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-os.html">Get UEBA Endpoints by Operating System</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Log Management (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-ip-dst.html">Search Traffic Logs by Destination IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-app-ctrl.html">Search Application Control Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---botnet.html">Search Attack Logs - Botnet Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---sessionid.html">Search Attack Logs - By Session ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---signature.html">Search Attack Logs - IPS Signatures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---dtypevirus.html">Search Malware Logs - dtype=Virus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---ext-malware-list.html">Search Malware Logs - External Malware List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---outbreak.html">Search Malware Logs - Outbreak Prevention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-webfilter-logs.html">Search Webfilter Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/fetch-log-search-result-by-task-id.html">Fetch Log Search Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/cancel-log-search-task.html">Cancel Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/create-search-task-for-ip-on-supervisor.html">Create Fabric Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/fetch-log-search-result-by-task-id-on-supervisor.html">Fetch Fabric Log Search Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FortiView (17 Operations)</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/create-ioc-task.html">Create IOC Analysis Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/fetch-ioc-result-by-task.html">Fetch IOC Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/ioc-drilldown-fgt-request.html">IOC Blacklist Drilldown - Device-Specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewioc/set-ioc-rescan.html">Configure IOC Rescan Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/create-task.html">Create Top Sources Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/fetch-result-by-task.html">Fetch Top Sources Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications.html">Create Top Applications Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications-w-policyname.html">Top Applications Filtered by Policy Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/fetch-result-by-task.html">Fetch Top Applications Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/create-task.html">Create Top Threats Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/fetch-result-by-task.html">Fetch Top Threats Results by Task ID</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">SD-WAN Interface Health Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-task-sd-wan-application.html">SD-WAN Application Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-task-sd-wan-interface-bandwidth-line.html">SD-WAN Interface Bandwidth Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-task-sd-wan-top-talkers.html">SD-WAN Top Talkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-task-sd-wan-audio-mos-score.html">SD-WAN Audio MOS Quality Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fetch-result-by-task-id.html">Fetch SD-WAN Results by Task ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Incidents &amp; Events (20 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-eventhandler.html">Get Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-fabric-connector-eventhandler.html">Add Fabric Connector to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-fabric-connector-eventhandler.html">Get Fabric Connector Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/delete-fabric-connector-eventhandler.html">Delete Fabric Connector from Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-subnet-eventhandler.html">Add Subnet to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-description.html">Update Event Handler Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-taget-enable.html">Update Event Handler Target Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/disable-eventhandler.html">Disable Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/upload-eventhandler-rework.html">Upload Event Handler Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-list.html">Get Subnet Address Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet.html">Add Subnet Address Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet-group.html">Add Subnet Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-groups.html">Get Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/update-subnet-groups.html">Update Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/get-fabric-conector.html">Get Automation Connectors (Webhooks)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/add-fabric-conector.html">Add Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/delete-fabric-conector.html">Delete Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-ips-alerts.html">Get IPS Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-sdwan-alerts.html">Get SD-WAN Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-events-malicious-by-ep.html">Get Malicious Events by Endpoint</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reports (22 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report.html">Run Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report-w-fromgui.html">Run Report from GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report.html">Download Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report-template.html">Download Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-templates.html">Get Report Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts.html">Get Report Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-no-filters.html">Get Report Layouts Without Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-eg-dailysummery.html">Get Specific Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/export-report-layout.html">Export Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/clone-report-templat.html">Clone Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/import-report.html">Import Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-charts.html">Get Report Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule.html">Add Report Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter.html">Add Report Schedule with FAZ and ADOM Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter-list.html">Add Report Schedule with FAZ and ADOM Filter List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-srcip-filter.html">Add Report Schedule with Source IP Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-schedules.html">Get Report Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/enable-hcache-socfilters.html">Enable HCache SOC Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/get-report-folder.html">Get Report Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-64.html">Add Report Folder (FortiAnalyzer 6.4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-70.html">Add Report Folder (FortiAnalyzer 7.0)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/delete-report-folder.html">Delete Report Folder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">System Settings (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-system-status.html">Get System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-systme-performance.html">Get System Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-admin-users.html">Get Admin Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-cert.html">Get Certificates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-info-from-managed-devices.html">Get Managed Device Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/restart.html">Restart FortiAnalyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group.html">Add Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/update-farbic-of-faz-group.html">Update Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group-with-members.html">Add Fabric of FortiAnalyzer Group with Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward.html">Get Log Forwarding Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward-devicefilter.html">Get Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/add-logforward-devicefilter.html">Add Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/delete-logforward-devicefilter.html">Delete Log Forward Device Filter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Pilots</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pilot/system-status.html">System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pilot/logview-search.html">LogView Search</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/fortiviewsecure-sd-wan/create-task-sd-wan-health-overview.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>SD-WAN Interface Health Overview</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-step-workflow">Two-Step Workflow</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-submit-task">Step 1: Submit Task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-fetch-results">Step 2: Fetch Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-submit-sd-wan-health-overview-query">Step 1: Submit SD-WAN Health Overview Query</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-filter">Device Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-range-format">Time Range Format</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-example">Request Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 2: Fetch Results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Parameters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Request Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeseries-object-fields">Timeseries Object Fields</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-python-example">Complete Python Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-time-analysis">Peak Time Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trend-visualization-data-export">Trend Visualization Data Export</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacity-growth-forecasting">Capacity Growth Forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-detection">Anomaly Detection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#business-hours-vs-after-hours-comparison">Business Hours vs After-Hours Comparison</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-range-recommendations">Time Range Recommendations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-endpoints">Related Endpoints</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="sd-wan-interface-health-overview">
+<h1>SD-WAN Interface Health Overview<a class="headerlink" href="#sd-wan-interface-health-overview" title="Link to this heading">#</a></h1>
+<p>Retrieve SD-WAN interface health overview with bandwidth trend analysis over time.</p>
+<blockquote>
+<div><p><strong>✅ All code examples tested:</strong> Verified against FortiAnalyzer v7.4.8, v7.6.4, v8.0.0.</p>
+</div></blockquote>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This endpoint retrieves SD-WAN interface bandwidth line/trend data - useful for:</p>
+<ul class="simple">
+<li><p>Visualizing bandwidth utilization trends over time</p></li>
+<li><p>Historical SD-WAN performance analysis</p></li>
+<li><p>Identifying bandwidth usage patterns and peak times</p></li>
+<li><p>Trend-based capacity forecasting</p></li>
+<li><p>Long-term SD-WAN health monitoring</p></li>
+<li><p>Performance regression detection</p></li>
+</ul>
+<p>This endpoint uses the <strong>two-step asynchronous pattern</strong>. See the workflow below for complete details.</p>
+</section>
+<section id="endpoint-details">
+<h2>Endpoint Details<a class="headerlink" href="#endpoint-details" title="Link to this heading">#</a></h2>
+<p><strong>Method:</strong> <code class="docutils literal notranslate"><span class="pre">POST</span></code>
+<strong>URL:</strong> <code class="docutils literal notranslate"><span class="pre">/jsonrpc</span></code>
+<strong>API Path (Step 1):</strong> <code class="docutils literal notranslate"><span class="pre">/fortiview/adom/{adom}/sdwan-intf-bandwidth-line/run</span></code>
+<strong>API Path (Step 2):</strong> <code class="docutils literal notranslate"><span class="pre">/fortiview/adom/{adom}/sdwan-intf-bandwidth-line/run/{tid}</span></code>
+<strong>ADOM Support:</strong> Yes
+<strong>Requires Authentication:</strong> Yes
+<strong>Minimum Version:</strong> 7.4.0</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Active session or valid API key</p></li>
+<li><p>Read access to FortiView data in specified ADOM</p></li>
+<li><p>SD-WAN feature enabled on FortiGate devices</p></li>
+<li><p>Time-series bandwidth data being collected</p></li>
+</ul>
+</section>
+<section id="two-step-workflow">
+<h2>Two-Step Workflow<a class="headerlink" href="#two-step-workflow" title="Link to this heading">#</a></h2>
+<section id="step-1-submit-task">
+<h3>Step 1: Submit Task<a class="headerlink" href="#step-1-submit-task" title="Link to this heading">#</a></h3>
+<p>Submit the SD-WAN health overview query and receive a Task ID (TID).</p>
+</section>
+<section id="step-2-fetch-results">
+<h3>Step 2: Fetch Results<a class="headerlink" href="#step-2-fetch-results" title="Link to this heading">#</a></h3>
+<p>Poll using the TID until complete, then retrieve the bandwidth trend data.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-1-submit-sd-wan-health-overview-query">
+<h2>Step 1: Submit SD-WAN Health Overview Query<a class="headerlink" href="#step-1-submit-sd-wan-health-overview-query" title="Link to this heading">#</a></h2>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>ADOM name (e.g., “root”)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">apiver</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+<td><p>API version</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">device</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Device filter specification</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">filter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+<td><p>Filter expression</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">limit</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
+<td><p>Number of top interfaces to return</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sort-by</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[]</span></code></p></td>
+<td><p>Sorting specification</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">time-range</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Time range for data</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">case-sensitive</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td><p>Filter case sensitivity</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="device-filter">
+<h3>Device Filter<a class="headerlink" href="#device-filter" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">└─</span> <span class="pre">devid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>Device ID or “All_FortiGate”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="time-range-format">
+<h3>Time Range Format<a class="headerlink" href="#time-range-format" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">└─</span> <span class="pre">start</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>Start time: “YYYY-MM-DD HH:MM”</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">└─</span> <span class="pre">end</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>End time: “YYYY-MM-DD HH:MM”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="request-example">
+<h2>Request Example<a class="headerlink" href="#request-example" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+REQUEST</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/fortiview/adom/root/sdwan-intf-bandwidth-line/run&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;apiver&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;case-sensitive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">            </span><span class="nt">&quot;devid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All_FortiGate&quot;</span>
+<span class="w">        </span><span class="p">}],</span>
+<span class="w">        </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;sort-by&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">        </span><span class="nt">&quot;time-range&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-11-09 00:01&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-11-09 23:59&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12466</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>Step 2: Fetch Results<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Parameters<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>ADOM name (same as Step 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Task ID from Step 1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2>Request Example<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+REQUEST</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/fortiview/adom/root/sdwan-intf-bandwidth-line/run/12466&quot;</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12466</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;percentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;timeseries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-11-09 00:00&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;interface&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wan1&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FGT-HQ&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;bandwidth_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45678912</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;bandwidth_out&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">23456789</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;utilization_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">45.7</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;utilization_out&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">23.5</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-11-09 01:00&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;interface&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wan1&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FGT-HQ&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;bandwidth_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">38234567</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;bandwidth_out&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">19123456</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;utilization_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">38.2</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;utilization_out&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">19.1</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="response-fields">
+<h2>Response Fields<a class="headerlink" href="#response-fields" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Task ID</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Task status: “done”, “running”, “error”</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Completion percentage (0-100)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">total</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Total number of data points</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">timeseries</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>Array of time-series data points</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="timeseries-object-fields">
+<h3>Timeseries Object Fields<a class="headerlink" href="#timeseries-object-fields" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Data point timestamp</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">interface</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>SD-WAN interface name</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">device</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>FortiGate device name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bandwidth_in</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Inbound bandwidth (bps)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bandwidth_out</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Outbound bandwidth (bps)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">utilization_in</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Inbound utilization percentage</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">utilization_out</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Outbound utilization percentage</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="complete-python-example">
+<h2>Complete Python Example<a class="headerlink" href="#complete-python-example" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">urllib3</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">InsecureRequestWarning</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_sdwan_health_overview</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">time_range</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get SD-WAN interface bandwidth trends over time</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        adom: ADOM name</span>
+<span class="sd">        time_range: Time range dict with &#39;start&#39; and &#39;end&#39;</span>
+<span class="sd">        limit: Number of top interfaces to include (default: 10)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: Time-series bandwidth data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://faz.example.com/jsonrpc&quot;</span>
+
+    <span class="c1"># Step 1: Submit task</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;add&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;/fortiview/adom/</span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">/sdwan-intf-bandwidth-line/run&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;apiver&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;case-sensitive&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;devid&quot;</span><span class="p">:</span> <span class="s2">&quot;All_FortiGate&quot;</span><span class="p">}],</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="n">limit</span><span class="p">,</span>
+            <span class="s2">&quot;sort-by&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;time-range&quot;</span><span class="p">:</span> <span class="n">time_range</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="n">tid</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;tid&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ Task submitted. TID: </span><span class="si">{</span><span class="n">tid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Step 2: Poll for completion</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">poll_payload</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;/fortiview/adom/</span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">/sdwan-intf-bandwidth-line/run/</span><span class="si">{</span><span class="n">tid</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">}],</span>
+            <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span>
+        <span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">poll_payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;done&#39;</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ Retrieved </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> data points&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;timeseries&#39;</span><span class="p">,</span> <span class="p">[])</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Example: Get 24-hour bandwidth trends</span>
+<span class="n">timeseries</span> <span class="o">=</span> <span class="n">get_sdwan_health_overview</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="s2">&quot;your_session_id&quot;</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-11-09 00:01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-11-09 23:59&quot;</span>
+    <span class="p">},</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="c1"># Display summary</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">SD-WAN Bandwidth Trend Summary:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total data points: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">timeseries</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">timeseries</span><span class="p">:</span>
+    <span class="c1"># Calculate average utilization</span>
+    <span class="n">avg_util_in</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s1">&#39;utilization_in&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">timeseries</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">timeseries</span><span class="p">)</span>
+    <span class="n">avg_util_out</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s1">&#39;utilization_out&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">timeseries</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">timeseries</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Inbound Utilization: </span><span class="si">{</span><span class="n">avg_util_in</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Outbound Utilization: </span><span class="si">{</span><span class="n">avg_util_out</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
+<section id="peak-time-analysis">
+<h3>Peak Time Analysis<a class="headerlink" href="#peak-time-analysis" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Identify peak bandwidth usage times</span>
+<span class="n">timeseries</span> <span class="o">=</span> <span class="n">get_sdwan_health_overview</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-11-09 00:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2025-11-09 23:59&quot;</span>
+    <span class="p">},</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="c1"># Find peak inbound and outbound usage</span>
+<span class="n">peak_in</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">timeseries</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;bandwidth_in&#39;</span><span class="p">])</span>
+<span class="n">peak_out</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">timeseries</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;bandwidth_out&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Peak Bandwidth Usage:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Inbound: </span><span class="si">{</span><span class="n">peak_in</span><span class="p">[</span><span class="s1">&#39;bandwidth_in&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">1000000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> Mbps at </span><span class="si">{</span><span class="n">peak_in</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Interface: </span><span class="si">{</span><span class="n">peak_in</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">peak_in</span><span class="p">[</span><span class="s1">&#39;interface&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Outbound: </span><span class="si">{</span><span class="n">peak_out</span><span class="p">[</span><span class="s1">&#39;bandwidth_out&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">1000000</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> Mbps at </span><span class="si">{</span><span class="n">peak_out</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Interface: </span><span class="si">{</span><span class="n">peak_out</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">peak_out</span><span class="p">[</span><span class="s1">&#39;interface&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="trend-visualization-data-export">
+<h3>Trend Visualization Data Export<a class="headerlink" href="#trend-visualization-data-export" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Export trend data for visualization tools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+
+<span class="n">timeseries</span> <span class="o">=</span> <span class="n">get_sdwan_health_overview</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;last-n-days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">100</span>
+<span class="p">)</span>
+
+<span class="c1"># Export to CSV for graphing</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sdwan_bandwidth_trends.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">,</span> <span class="s1">&#39;device&#39;</span><span class="p">,</span> <span class="s1">&#39;interface&#39;</span><span class="p">,</span> <span class="s1">&#39;bandwidth_in_mbps&#39;</span><span class="p">,</span> <span class="s1">&#39;bandwidth_out_mbps&#39;</span><span class="p">,</span> <span class="s1">&#39;utilization_in&#39;</span><span class="p">,</span> <span class="s1">&#39;utilization_out&#39;</span><span class="p">]</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+
+    <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">datapoint</span> <span class="ow">in</span> <span class="n">timeseries</span><span class="p">:</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span>
+            <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;device&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;interface&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;interface&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;bandwidth_in_mbps&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;bandwidth_in&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">,</span>
+            <span class="s1">&#39;bandwidth_out_mbps&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;bandwidth_out&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">,</span>
+            <span class="s1">&#39;utilization_in&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;utilization_in&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;utilization_out&#39;</span><span class="p">:</span> <span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;utilization_out&#39;</span><span class="p">]</span>
+        <span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Trend data exported to sdwan_bandwidth_trends.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="capacity-growth-forecasting">
+<h3>Capacity Growth Forecasting<a class="headerlink" href="#capacity-growth-forecasting" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analyze bandwidth growth trends</span>
+<span class="n">timeseries</span> <span class="o">=</span> <span class="n">get_sdwan_health_overview</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;last-n-days&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="c1"># Group by interface and calculate growth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="n">interface_usage</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">datapoint</span> <span class="ow">in</span> <span class="n">timeseries</span><span class="p">:</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;interface&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">interface_usage</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;utilization_in&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;30-Day Bandwidth Growth Analysis:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">intf</span><span class="p">,</span> <span class="n">utilizations</span> <span class="ow">in</span> <span class="n">interface_usage</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">utilizations</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c1"># Compare first week to last week</span>
+        <span class="n">week1_avg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">utilizations</span><span class="p">[:</span><span class="mi">7</span><span class="p">])</span> <span class="o">/</span> <span class="nb">min</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">utilizations</span><span class="p">[:</span><span class="mi">7</span><span class="p">]))</span>
+        <span class="n">week4_avg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">utilizations</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">:])</span> <span class="o">/</span> <span class="nb">min</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">utilizations</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">:]))</span>
+        <span class="n">growth</span> <span class="o">=</span> <span class="p">((</span><span class="n">week4_avg</span> <span class="o">-</span> <span class="n">week1_avg</span><span class="p">)</span> <span class="o">/</span> <span class="n">week1_avg</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">week1_avg</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intf</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Week 1 Avg: </span><span class="si">{</span><span class="n">week1_avg</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Week 4 Avg: </span><span class="si">{</span><span class="n">week4_avg</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Growth: </span><span class="si">{</span><span class="n">growth</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">growth</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ⚠️ High growth - consider capacity planning&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="anomaly-detection">
+<h3>Anomaly Detection<a class="headerlink" href="#anomaly-detection" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Detect bandwidth usage anomalies</span>
+<span class="n">timeseries</span> <span class="o">=</span> <span class="n">get_sdwan_health_overview</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;last-n-hours&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">},</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate baseline and detect anomalies</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span>
+
+<span class="n">interface_groups</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">datapoint</span> <span class="ow">in</span> <span class="n">timeseries</span><span class="p">:</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;interface&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">interface_groups</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;utilization_in&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bandwidth Anomaly Detection:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">intf</span><span class="p">,</span> <span class="n">utilizations</span> <span class="ow">in</span> <span class="n">interface_groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">utilizations</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">avg</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">utilizations</span><span class="p">)</span>
+        <span class="n">std</span> <span class="o">=</span> <span class="n">stdev</span><span class="p">(</span><span class="n">utilizations</span><span class="p">)</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="n">avg</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">std</span><span class="p">)</span>  <span class="c1"># 2 standard deviations</span>
+
+        <span class="n">anomalies</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">utilizations</span> <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">anomalies</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">intf</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Baseline: </span><span class="si">{</span><span class="n">avg</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% ± </span><span class="si">{</span><span class="n">std</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Threshold: </span><span class="si">{</span><span class="n">threshold</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Anomalies Detected: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">anomalies</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Peak Anomaly: </span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">anomalies</span><span class="p">)</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="business-hours-vs-after-hours-comparison">
+<h3>Business Hours vs After-Hours Comparison<a class="headerlink" href="#business-hours-vs-after-hours-comparison" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare bandwidth usage during business hours vs off-hours</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">timeseries</span> <span class="o">=</span> <span class="n">get_sdwan_health_overview</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;last-n-days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+
+<span class="n">business_hours</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">after_hours</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">datapoint</span> <span class="ow">in</span> <span class="n">timeseries</span><span class="p">:</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">],</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M&quot;</span><span class="p">)</span>
+    <span class="n">hour</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+
+    <span class="k">if</span> <span class="mi">8</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># 8 AM to 6 PM</span>
+        <span class="n">business_hours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;utilization_in&#39;</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">after_hours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">datapoint</span><span class="p">[</span><span class="s1">&#39;utilization_in&#39;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">business_hours</span> <span class="ow">and</span> <span class="n">after_hours</span><span class="p">:</span>
+    <span class="n">avg_business</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">business_hours</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">business_hours</span><span class="p">)</span>
+    <span class="n">avg_after</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">after_hours</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">after_hours</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Business Hours vs After-Hours Analysis:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Business Hours (8AM-6PM) Avg: </span><span class="si">{</span><span class="n">avg_business</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  After Hours Avg: </span><span class="si">{</span><span class="n">avg_after</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Difference: </span><span class="si">{</span><span class="n">avg_business</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">avg_after</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">avg_after</span> <span class="o">&gt;</span> <span class="n">avg_business</span> <span class="o">*</span> <span class="mf">0.7</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  ⚠️ High after-hours usage detected&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="error-handling">
+<h2>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+ERROR RESPONSE - Invalid Time Range</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid time range&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Common causes:</strong></p>
+<ul class="simple">
+<li><p>Time range too large for trend analysis</p></li>
+<li><p>Invalid date format</p></li>
+<li><p>No data available for specified period</p></li>
+</ul>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>💡 Tip:</strong> Use 24-hour to 7-day time ranges for meaningful trend analysis while avoiding performance issues.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip:</strong> Export data to visualization tools (Grafana, Excel, etc.) for better trend analysis and reporting.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>⚠️ Warning:</strong> Very large time ranges (&gt;30 days) may result in data aggregation or sampling, reducing granularity.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip:</strong> Schedule regular trend data collection for historical analysis and capacity planning.</p>
+</div></blockquote>
+</section>
+<section id="time-range-recommendations">
+<h2>Time Range Recommendations<a class="headerlink" href="#time-range-recommendations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Use Case</p></th>
+<th class="head"><p>Recommended Range</p></th>
+<th class="head"><p>Granularity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Real-time Monitoring</p></td>
+<td><p>1-6 hours</p></td>
+<td><p>5-15 minutes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Daily Analysis</p></td>
+<td><p>24 hours</p></td>
+<td><p>30-60 minutes</p></td>
+</tr>
+<tr class="row-even"><td><p>Weekly Trends</p></td>
+<td><p>7 days</p></td>
+<td><p>1-2 hours</p></td>
+</tr>
+<tr class="row-odd"><td><p>Monthly Reports</p></td>
+<td><p>30 days</p></td>
+<td><p>4-6 hours</p></td>
+</tr>
+<tr class="row-even"><td><p>Capacity Planning</p></td>
+<td><p>90 days</p></td>
+<td><p>Daily aggregates</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="related-endpoints">
+<h2>Related Endpoints<a class="headerlink" href="#related-endpoints" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="create-task-sd-wan-interface-bandwidth-line.html"><span class="std std-doc">SD-WAN Interface Statistics</span></a> - Current interface metrics</p></li>
+<li><p><a class="reference internal" href="create-task-sd-wan-top-talkers.html"><span class="std std-doc">SD-WAN Top Talkers</span></a> - Top bandwidth consumers</p></li>
+<li><p><a class="reference internal" href="create-task-sd-wan-application.html"><span class="std std-doc">SD-WAN Applications</span></a> - Application bandwidth usage</p></li>
+<li><p><a class="reference internal" href="fetch-result-by-task-id.html"><span class="std std-doc">Fetch Results by Task ID</span></a> - Retrieve completed task results</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Last Updated:</strong> 2025-11-09
+<strong>API Version:</strong> 7.6.4+</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../fortiviewtop-threats/fetch-result-by-task.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Fetch Top Threats Results by Task ID</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="create-task-sd-wan-application.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SD-WAN Application Usage</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-step-workflow">Two-Step Workflow</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-submit-task">Step 1: Submit Task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-fetch-results">Step 2: Fetch Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-submit-sd-wan-health-overview-query">Step 1: Submit SD-WAN Health Overview Query</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-filter">Device Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-range-format">Time Range Format</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-example">Request Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 2: Fetch Results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Parameters</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Request Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeseries-object-fields">Timeseries Object Fields</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-python-example">Complete Python Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-time-analysis">Peak Time Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trend-visualization-data-export">Trend Visualization Data Export</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacity-growth-forecasting">Capacity Growth Forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anomaly-detection">Anomaly Detection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#business-hours-vs-after-hours-comparison">Business Hours vs After-Hours Comparison</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-range-recommendations">Time Range Recommendations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-endpoints">Related Endpoints</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roland Stierli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Fortinet.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Nov 18, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

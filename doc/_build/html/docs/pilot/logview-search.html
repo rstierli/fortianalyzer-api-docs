@@ -1,0 +1,1738 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>LogView Search &#8212; Project name not set 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/lightbox.min.css?v=6e7d0de0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../_static/js/lightbox2-options.js?v=b4db3a7c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/pilot/logview-search';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="System Status" href="system-status.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Nov 18, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-light" alt="Project name not set 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-dark" alt="Project name not set 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/authentication.html">Authentication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Authentication</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/login.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/logout.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortianalyzercloudlogin/forticloud-token.html">FortiCloud Token Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortianalyzercloudlogin/get-session-id.html">Get Session ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device Manager (15 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-epid.html">Get UEBA Endpoints by Endpoint ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-os.html">Get UEBA Endpoints by Operating System</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Log Management (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-ip-dst.html">Search Traffic Logs by Destination IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-app-ctrl.html">Search Application Control Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---botnet.html">Search Attack Logs - Botnet Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---sessionid.html">Search Attack Logs - By Session ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---signature.html">Search Attack Logs - IPS Signatures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---dtypevirus.html">Search Malware Logs - dtype=Virus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---ext-malware-list.html">Search Malware Logs - External Malware List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---outbreak.html">Search Malware Logs - Outbreak Prevention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-webfilter-logs.html">Search Webfilter Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/fetch-log-search-result-by-task-id.html">Fetch Log Search Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/cancel-log-search-task.html">Cancel Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/create-search-task-for-ip-on-supervisor.html">Create Fabric Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/fetch-log-search-result-by-task-id-on-supervisor.html">Fetch Fabric Log Search Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FortiView (17 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/create-ioc-task.html">Create IOC Analysis Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/fetch-ioc-result-by-task.html">Fetch IOC Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/ioc-drilldown-fgt-request.html">IOC Blacklist Drilldown - Device-Specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewioc/set-ioc-rescan.html">Configure IOC Rescan Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/create-task.html">Create Top Sources Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/fetch-result-by-task.html">Fetch Top Sources Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications.html">Create Top Applications Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications-w-policyname.html">Top Applications Filtered by Policy Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/fetch-result-by-task.html">Fetch Top Applications Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/create-task.html">Create Top Threats Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/fetch-result-by-task.html">Fetch Top Threats Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-health-overview.html">SD-WAN Interface Health Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-application.html">SD-WAN Application Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-interface-bandwidth-line.html">SD-WAN Interface Bandwidth Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-top-talkers.html">SD-WAN Top Talkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-audio-mos-score.html">SD-WAN Audio MOS Quality Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/fetch-result-by-task-id.html">Fetch SD-WAN Results by Task ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Incidents &amp; Events (20 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-eventhandler.html">Get Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-fabric-connector-eventhandler.html">Add Fabric Connector to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-fabric-connector-eventhandler.html">Get Fabric Connector Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/delete-fabric-connector-eventhandler.html">Delete Fabric Connector from Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-subnet-eventhandler.html">Add Subnet to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-description.html">Update Event Handler Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-taget-enable.html">Update Event Handler Target Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/disable-eventhandler.html">Disable Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/upload-eventhandler-rework.html">Upload Event Handler Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-list.html">Get Subnet Address Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet.html">Add Subnet Address Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet-group.html">Add Subnet Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-groups.html">Get Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/update-subnet-groups.html">Update Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/get-fabric-conector.html">Get Automation Connectors (Webhooks)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/add-fabric-conector.html">Add Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/delete-fabric-conector.html">Delete Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-ips-alerts.html">Get IPS Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-sdwan-alerts.html">Get SD-WAN Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-events-malicious-by-ep.html">Get Malicious Events by Endpoint</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reports (22 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report.html">Run Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report-w-fromgui.html">Run Report from GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report.html">Download Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report-template.html">Download Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-templates.html">Get Report Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts.html">Get Report Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-no-filters.html">Get Report Layouts Without Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-eg-dailysummery.html">Get Specific Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/export-report-layout.html">Export Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/clone-report-templat.html">Clone Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/import-report.html">Import Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-charts.html">Get Report Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule.html">Add Report Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter.html">Add Report Schedule with FAZ and ADOM Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter-list.html">Add Report Schedule with FAZ and ADOM Filter List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-srcip-filter.html">Add Report Schedule with Source IP Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-schedules.html">Get Report Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/enable-hcache-socfilters.html">Enable HCache SOC Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/get-report-folder.html">Get Report Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-64.html">Add Report Folder (FortiAnalyzer 6.4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-70.html">Add Report Folder (FortiAnalyzer 7.0)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/delete-report-folder.html">Delete Report Folder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">System Settings (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-system-status.html">Get System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-systme-performance.html">Get System Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-admin-users.html">Get Admin Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-cert.html">Get Certificates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-info-from-managed-devices.html">Get Managed Device Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/restart.html">Restart FortiAnalyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group.html">Add Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/update-farbic-of-faz-group.html">Update Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group-with-members.html">Add Fabric of FortiAnalyzer Group with Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward.html">Get Log Forwarding Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward-devicefilter.html">Get Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/add-logforward-devicefilter.html">Add Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/delete-logforward-devicefilter.html">Delete Log Forward Device Filter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Pilots</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="system-status.html">System Status</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">LogView Search</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/pilot/logview-search.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>LogView Search</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-diagram">Workflow Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-endpoint">Step 1 Endpoint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-endpoint">Step 2 Endpoint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-submit-search-query">Step 1: Submit Search Query</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-types">Log Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-range-format">Time Range Format</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-syntax">Filter Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-example">Request Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-poll-status-and-fetch-results">Step 2: Poll Status and Fetch Results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polling-strategy">Polling Strategy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Request Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-format">Response Format</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#while-processing">While Processing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#when-complete">When Complete</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-implementation">Complete Implementation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-with-full-workflow">Python Example with Full Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curl-example">cURL Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-search-timeout">Error: Search Timeout</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-code-3-invalid-tid">Error Code -3: Invalid TID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-no-logs-found">Error: No Logs Found</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-security-incident-investigation">Use Case 1: Security Incident Investigation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-compliance-reporting">Use Case 2: Compliance Reporting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-3-network-troubleshooting">Use Case 3: Network Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-endpoints">Related Endpoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-topics-log-search-logview-forensics-security-investigation"><strong>Related Topics:</strong> log-search, logview, forensics, security-investigation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="logview-search">
+<h1>LogView Search<a class="headerlink" href="#logview-search" title="Link to this heading">#</a></h1>
+<p>Search and retrieve logs from FortiAnalyzer using flexible filters and time ranges.</p>
+<blockquote>
+<div><p><strong>✅ All code examples tested:</strong> Verified against FortiAnalyzer v7.4.8, v7.6.4, v8.0.0.</p>
+</div></blockquote>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The LogView Search endpoint allows you to query logs stored in FortiAnalyzer with powerful filtering capabilities. This is one of the most frequently used API endpoints for:</p>
+<ul class="simple">
+<li><p>Security incident investigation</p></li>
+<li><p>Compliance auditing and reporting</p></li>
+<li><p>Network troubleshooting</p></li>
+<li><p>Traffic analysis</p></li>
+<li><p>Threat hunting</p></li>
+</ul>
+<p>This endpoint uses a <strong>two-step asynchronous pattern</strong> because log searches can process millions of records and may take several seconds to complete.</p>
+<blockquote>
+<div><p><strong>💡 Tip:</strong> This two-step pattern is essential for handling large log datasets efficiently. The FortiAnalyzer processes your query in the background while your application polls for completion.</p>
+</div></blockquote>
+</section>
+<section id="workflow-diagram">
+<h2>Workflow Diagram<a class="headerlink" href="#workflow-diagram" title="Link to this heading">#</a></h2>
+<p><a href="../../_images/logview-search-workflow.png" data-lightbox="image-set">
+<img alt="LogView Search Workflow" src="../../_images/logview-search-workflow.png" /></a>
+</p>
+<p><strong>Two-Step Asynchronous Pattern:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Submit Query:</strong> Client sends search request → FortiAnalyzer returns TID (Task ID)</p></li>
+<li><p><strong>Poll Status:</strong> Client polls status endpoint with TID every 1-2 seconds</p>
+<ul class="simple">
+<li><p>FortiAnalyzer returns progress percentage and status</p></li>
+<li><p>Continue until <code class="docutils literal notranslate"><span class="pre">status:</span> <span class="pre">&quot;done&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">percentage:</span> <span class="pre">100</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Fetch Results:</strong> Client retrieves log entries using TID</p></li>
+</ol>
+</section>
+<section id="endpoint-details">
+<h2>Endpoint Details<a class="headerlink" href="#endpoint-details" title="Link to this heading">#</a></h2>
+<p><strong>Method:</strong> <code class="docutils literal notranslate"><span class="pre">POST</span></code><br />
+<strong>URL:</strong> <code class="docutils literal notranslate"><span class="pre">/jsonrpc</span></code><br />
+<strong>ADOM Support:</strong> Yes (required)<br />
+<strong>Requires Authentication:</strong> Yes<br />
+<strong>Minimum Version:</strong> 7.0.0</p>
+<section id="step-1-endpoint">
+<h3>Step 1 Endpoint<a class="headerlink" href="#step-1-endpoint" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>API Path:</strong> <code class="docutils literal notranslate"><span class="pre">/logview/adom/{adom}/logsearch</span></code></p></li>
+<li><p><strong>Method:</strong> <code class="docutils literal notranslate"><span class="pre">add</span></code></p></li>
+<li><p><strong>Returns:</strong> Task ID (TID)</p></li>
+</ul>
+</section>
+<section id="step-2-endpoint">
+<h3>Step 2 Endpoint<a class="headerlink" href="#step-2-endpoint" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>API Path:</strong> <code class="docutils literal notranslate"><span class="pre">/logview/adom/{adom}/logsearch/{tid}</span></code></p></li>
+<li><p><strong>Method:</strong> <code class="docutils literal notranslate"><span class="pre">get</span></code></p></li>
+<li><p><strong>Returns:</strong> Search results and status</p></li>
+</ul>
+</section>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Active session or valid API key</p></li>
+<li><p>Read access to the specified ADOM</p></li>
+<li><p>Log data available for the time range</p></li>
+<li><p>Appropriate log retention settings</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="step-1-submit-search-query">
+<h2>Step 1: Submit Search Query<a class="headerlink" href="#step-1-submit-search-query" title="Link to this heading">#</a></h2>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>ADOM name (e.g., “root”)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">device</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string/array</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Device name, group, or array of devices</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">logtype</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Log type (traffic, event, app-ctrl, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">filter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>No</p></td>
+<td><p>-</p></td>
+<td><p>Log filter expression</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">time-range</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Time range specification</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">case-sensitive</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td><p>Case-sensitive filtering</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">max-logs</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10000</span></code></p></td>
+<td><p>Maximum number of logs to return</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="log-types">
+<h3>Log Types<a class="headerlink" href="#log-types" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Log Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">traffic</span></code></p></td>
+<td><p>Firewall traffic logs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">event</span></code></p></td>
+<td><p>System and security events</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">app-ctrl</span></code></p></td>
+<td><p>Application control logs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">attack</span></code></p></td>
+<td><p>IPS/IDS attack logs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">virus</span></code></p></td>
+<td><p>AntiVirus logs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">webfilter</span></code></p></td>
+<td><p>Web filtering logs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dns</span></code></p></td>
+<td><p>DNS query logs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ssh</span></code></p></td>
+<td><p>SSH logs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code></p></td>
+<td><p>SSL/TLS logs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="time-range-format">
+<h3>Time Range Format<a class="headerlink" href="#time-range-format" title="Link to this heading">#</a></h3>
+<p><strong>Absolute Time:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-11-09 00:00:00&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-11-09 23:59:59&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Relative Time:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;last-n-hours&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Epoch Time:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1699488000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1699574399</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="filter-syntax">
+<h3>Filter Syntax<a class="headerlink" href="#filter-syntax" title="Link to this heading">#</a></h3>
+<p>FortiAnalyzer uses a SQL-like filter syntax:</p>
+<p><strong>Basic Operators:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> Equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> Not equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> Greater than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> Less than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> Greater than or equal</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> Less than or equal</p></li>
+</ul>
+<p><strong>Logical Operators:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code> Logical AND</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code> Logical OR</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span></code> Logical NOT</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srcip</span><span class="o">==</span><span class="mf">10.0.1.100</span>
+<span class="n">srcip</span><span class="o">==</span><span class="mf">10.0.1.0</span><span class="o">/</span><span class="mi">24</span> <span class="ow">and</span> <span class="n">dstport</span><span class="o">==</span><span class="mi">443</span>
+<span class="n">srcip</span><span class="o">!=</span><span class="mf">192.168.1.0</span><span class="o">/</span><span class="mi">24</span> <span class="ow">or</span> <span class="n">dstip</span><span class="o">!=</span><span class="mf">10.0.0.0</span><span class="o">/</span><span class="mi">8</span>
+<span class="n">action</span><span class="o">==</span><span class="n">deny</span> <span class="ow">and</span> <span class="p">(</span><span class="n">dstport</span><span class="o">==</span><span class="mi">22</span> <span class="ow">or</span> <span class="n">dstport</span><span class="o">==</span><span class="mi">3389</span><span class="p">)</span>
+<span class="n">hostname</span> <span class="n">contains</span> <span class="s2">&quot;server&quot;</span> <span class="ow">and</span> <span class="n">severity</span><span class="o">&gt;=</span><span class="n">high</span>
+</pre></div>
+</div>
+</section>
+<section id="request-example">
+<h3>Request Example<a class="headerlink" href="#request-example" title="Link to this heading">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+REQUEST</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/logview/adom/root/logsearch&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;All_FortiGate&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;logtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;traffic&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;srcip==10.0.1.100 and dstport==443&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;time-range&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;last-n-hours&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;case-sensitive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;max-logs&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/logview/adom/root/logsearch&quot;</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kLSFZ7qT9xZc1vB3rtKlXg==&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p><strong>📝 Note:</strong> Save the <code class="docutils literal notranslate"><span class="pre">tid</span></code> value! You’ll need it to check status and retrieve results.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-2-poll-status-and-fetch-results">
+<h2>Step 2: Poll Status and Fetch Results<a class="headerlink" href="#step-2-poll-status-and-fetch-results" title="Link to this heading">#</a></h2>
+<section id="polling-strategy">
+<h3>Polling Strategy<a class="headerlink" href="#polling-strategy" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>💡 Tip:</strong> Use exponential backoff to balance responsiveness with server load.</p>
+</div></blockquote>
+<p><strong>Recommended Pattern:</strong></p>
+<ol class="arabic simple">
+<li><p>Wait 1 second, check status</p></li>
+<li><p>If not complete, wait 2 seconds</p></li>
+<li><p>If still not complete, wait 4 seconds</p></li>
+<li><p>Continue doubling up to 10 seconds maximum</p></li>
+<li><p>Implement timeout (default: 30 seconds)</p></li>
+</ol>
+</section>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Same ADOM as Step 1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Yes</p></td>
+<td><p>-</p></td>
+<td><p>Task ID from Step 1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">limit</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">100</span></code></p></td>
+<td><p>Results per page</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">offset</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>No</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p>Starting position</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id2">
+<h3>Request Example<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+REQUEST</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/logview/adom/root/logsearch/12345&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;offset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="response-format">
+<h3>Response Format<a class="headerlink" href="#response-format" title="Link to this heading">#</a></h3>
+<section id="while-processing">
+<h4>While Processing<a class="headerlink" href="#while-processing" title="Link to this heading">#</a></h4>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;running&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;percentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;total_lines&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Searching logs...&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="when-complete">
+<h4>When Complete<a class="headerlink" href="#when-complete" title="Link to this heading">#</a></h4>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;percentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;total_lines&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;logs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-11-09&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;14:23:15&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;devid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FGT-01&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;devname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FortiGate-01&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;logid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000000013&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;traffic&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;subtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;forward&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notice&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;srcip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.1.100&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;srcport&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">54321</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;dstip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;172.217.14.206&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;dstport&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">443</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;proto&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;policyid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HTTPS&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;sentbyte&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2048</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;rcvdbyte&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8192</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="c1">// ... more log entries</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="response-fields">
+<h3>Response Fields<a class="headerlink" href="#response-fields" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Task ID</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>“running”, “done”, “cancelled”, or “error”</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Completion percentage (0-100)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">total_lines</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Total log entries found (when complete)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">logs</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>Array of log entries (when complete)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="complete-implementation">
+<h2>Complete Implementation<a class="headerlink" href="#complete-implementation" title="Link to this heading">#</a></h2>
+<section id="python-example-with-full-workflow">
+<h3>Python Example with Full Workflow<a class="headerlink" href="#python-example-with-full-workflow" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="c1"># Disable SSL warnings</span>
+<span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">urllib3</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">InsecureRequestWarning</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_config</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load FortiAnalyzer configuration&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;.faz-env.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">login</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Establish session&quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://faz.example.com/jsonrpc&quot;</span>
+    
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;exec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/sys/login/user&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span>
+                <span class="s2">&quot;passwd&quot;</span><span class="p">:</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+    
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Login failed: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">logout</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">session_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Terminate session&quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://faz.example.com/jsonrpc&quot;</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;exec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/sys/logout&quot;</span><span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">999</span>
+    <span class="p">}</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">submit_log_search</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">logtype</span><span class="p">,</span> <span class="n">filter_expr</span><span class="p">,</span> <span class="n">time_range</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Step 1: Submit log search and get TID</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+<span class="sd">        adom: ADOM name</span>
+<span class="sd">        device: Device name or group</span>
+<span class="sd">        logtype: Log type (traffic, event, etc.)</span>
+<span class="sd">        filter_expr: Filter expression</span>
+<span class="sd">        time_range: Time range dict</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        int: Task ID (TID)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://faz.example.com/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;add&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;/logview/adom/</span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">/logsearch&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="n">device</span><span class="p">,</span>
+                <span class="s2">&quot;logtype&quot;</span><span class="p">:</span> <span class="n">logtype</span><span class="p">,</span>
+                <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="n">filter_expr</span><span class="p">,</span>
+                <span class="s2">&quot;time-range&quot;</span><span class="p">:</span> <span class="n">time_range</span><span class="p">,</span>
+                <span class="s2">&quot;case-sensitive&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="s2">&quot;max-logs&quot;</span><span class="p">:</span> <span class="mi">5000</span>
+            <span class="p">}</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+    
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">tid</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;tid&#39;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ Search submitted successfully. TID: </span><span class="si">{</span><span class="n">tid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tid</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Search failed: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">check_search_status</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">tid</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check search status</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+<span class="sd">        adom: ADOM name</span>
+<span class="sd">        tid: Task ID</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Status information</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://faz.example.com/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;/logview/adom/</span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">/logsearch/</span><span class="si">{</span><span class="n">tid</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span>
+    <span class="p">}</span>
+    
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status check failed: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch_search_results</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">tid</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Step 2: Fetch search results</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+<span class="sd">        adom: ADOM name</span>
+<span class="sd">        tid: Task ID</span>
+<span class="sd">        limit: Results per page</span>
+<span class="sd">        offset: Starting position</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Search results</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://faz.example.com/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;/logview/adom/</span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">/logsearch/</span><span class="si">{</span><span class="n">tid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="n">limit</span><span class="p">,</span>
+                <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="n">offset</span>
+            <span class="p">}</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span>
+    <span class="p">}</span>
+    
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fetch failed: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">wait_for_search_completion</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">tid</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Poll search until complete with exponential backoff</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+<span class="sd">        adom: ADOM name</span>
+<span class="sd">        tid: Task ID</span>
+<span class="sd">        timeout: Maximum wait time in seconds</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Final status data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">delay</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">max_delay</span> <span class="o">=</span> <span class="mi">10</span>
+    
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># Check timeout</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+        <span class="k">if</span> <span class="n">elapsed</span> <span class="o">&gt;</span> <span class="n">timeout</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TimeoutError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Search did not complete within </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Check status</span>
+        <span class="n">status_data</span> <span class="o">=</span> <span class="n">check_search_status</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">tid</span><span class="p">)</span>
+        
+        <span class="n">status</span> <span class="o">=</span> <span class="n">status_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">)</span>
+        <span class="n">percentage</span> <span class="o">=</span> <span class="n">status_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;percentage&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">percentage</span><span class="si">}</span><span class="s2">% complete&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Check completion</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;done&#39;</span> <span class="ow">and</span> <span class="n">percentage</span> <span class="o">==</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Search completed successfully&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">status_data</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Search failed: </span><span class="si">{</span><span class="n">status_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Unknown error&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;cancelled&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Search was cancelled&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Wait before next poll</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">max_delay</span><span class="p">))</span>
+        <span class="n">delay</span> <span class="o">*=</span> <span class="mi">2</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch_all_logs</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">tid</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fetch all logs with pagination</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+<span class="sd">        adom: ADOM name</span>
+<span class="sd">        tid: Task ID</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        list: All log entries</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">all_logs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">100</span>
+    
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">fetch_search_results</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">,</span> <span class="n">tid</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
+        
+        <span class="n">logs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;logs&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">logs</span><span class="p">:</span>
+            <span class="k">break</span>
+        
+        <span class="n">all_logs</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">logs</span><span class="p">)</span>
+        
+        <span class="n">total_lines</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;total_lines&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Fetched </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_logs</span><span class="p">)</span><span class="si">}</span><span class="s2"> of </span><span class="si">{</span><span class="n">total_lines</span><span class="si">}</span><span class="s2"> logs&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_logs</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">total_lines</span><span class="p">:</span>
+            <span class="k">break</span>
+        
+        <span class="n">offset</span> <span class="o">+=</span> <span class="n">limit</span>
+    
+    <span class="k">return</span> <span class="n">all_logs</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main execution demonstrating log search workflow&quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">()</span>
+    <span class="n">session_id</span> <span class="o">=</span> <span class="kc">None</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Login</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 1: Logging in...&quot;</span><span class="p">)</span>
+        <span class="n">session_id</span> <span class="o">=</span> <span class="n">login</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Logged in successfully</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Submit search</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 2: Submitting log search...&quot;</span><span class="p">)</span>
+        <span class="n">tid</span> <span class="o">=</span> <span class="n">submit_log_search</span><span class="p">(</span>
+            <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+            <span class="n">adom</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;adom&#39;</span><span class="p">],</span>
+            <span class="n">device</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;device_filter&#39;</span><span class="p">],</span>
+            <span class="n">logtype</span><span class="o">=</span><span class="s1">&#39;traffic&#39;</span><span class="p">,</span>
+            <span class="n">filter_expr</span><span class="o">=</span><span class="s1">&#39;srcip==10.0.1.100 and dstport==443&#39;</span><span class="p">,</span>
+            <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;last-n-hours&#39;</span><span class="p">:</span> <span class="mi">24</span><span class="p">}</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        
+        <span class="c1"># Wait for completion</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 3: Waiting for search completion...&quot;</span><span class="p">)</span>
+        <span class="n">status_data</span> <span class="o">=</span> <span class="n">wait_for_search_completion</span><span class="p">(</span>
+            <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+            <span class="n">adom</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;adom&#39;</span><span class="p">],</span>
+            <span class="n">tid</span><span class="o">=</span><span class="n">tid</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;search_timeout_seconds&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+        
+        <span class="c1"># Fetch all logs</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Step 4: Fetching logs...&quot;</span><span class="p">)</span>
+        <span class="n">all_logs</span> <span class="o">=</span> <span class="n">fetch_all_logs</span><span class="p">(</span>
+            <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+            <span class="n">adom</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;adom&#39;</span><span class="p">],</span>
+            <span class="n">tid</span><span class="o">=</span><span class="n">tid</span>
+        <span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Retrieved </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_logs</span><span class="p">)</span><span class="si">}</span><span class="s2"> total logs&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Display sample logs</span>
+        <span class="k">if</span> <span class="n">all_logs</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sample Log Entries:&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">log</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_logs</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Log </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Time: </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Device: </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;devname&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Source: </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;srcip&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;srcport&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Destination: </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dstip&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dstport&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Action: </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;action&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Service: </span><span class="si">{</span><span class="n">log</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;service&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+    <span class="k">except</span> <span class="ne">TimeoutError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✗ Timeout: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✗ Error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">session_id</span><span class="p">:</span>
+            <span class="n">logout</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">session_id</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Logged out&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="curl-example">
+<h3>cURL Example<a class="headerlink" href="#curl-example" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Configuration</span>
+<span class="nv">FAZ_HOST</span><span class="o">=</span><span class="s2">&quot;faz.example.com&quot;</span>
+<span class="nv">FAZ_PORT</span><span class="o">=</span><span class="s2">&quot;443&quot;</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;your_password_here&quot;</span>
+<span class="nv">ADOM</span><span class="o">=</span><span class="s2">&quot;root&quot;</span>
+<span class="nv">TIMEOUT</span><span class="o">=</span><span class="m">30</span>
+
+<span class="c1"># Login</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Step 1: Login ===&quot;</span>
+<span class="nv">LOGIN_RESPONSE</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;exec&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{</span>
+<span class="s1">      &quot;url&quot;: &quot;/sys/login/user&quot;,</span>
+<span class="s1">      &quot;data&quot;: {&quot;user&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s1">&#39;&quot;, &quot;passwd&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s1">&#39;&quot;}</span>
+<span class="s1">    }],</span>
+<span class="s1">    &quot;session&quot;: null,</span>
+<span class="s1">    &quot;id&quot;: 1</span>
+<span class="s1">  }&#39;</span><span class="k">)</span>
+
+<span class="nv">SESSION_ID</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$LOGIN_RESPONSE</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.session&#39;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Session ID: </span><span class="nv">$SESSION_ID</span><span class="s2">&quot;</span>
+<span class="nb">echo</span>
+
+<span class="c1"># Submit search</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Step 2: Submit Search ===&quot;</span>
+<span class="nv">SEARCH_RESPONSE</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;add&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{</span>
+<span class="s1">      &quot;url&quot;: &quot;/logview/adom/&#39;</span><span class="si">${</span><span class="nv">ADOM</span><span class="si">}</span><span class="s1">&#39;/logsearch&quot;,</span>
+<span class="s1">      &quot;data&quot;: {</span>
+<span class="s1">        &quot;device&quot;: &quot;All_FortiGate&quot;,</span>
+<span class="s1">        &quot;logtype&quot;: &quot;traffic&quot;,</span>
+<span class="s1">        &quot;filter&quot;: &quot;srcip==10.0.1.100 and dstport==443&quot;,</span>
+<span class="s1">        &quot;time-range&quot;: {&quot;last-n-hours&quot;: 24}</span>
+<span class="s1">      }</span>
+<span class="s1">    }],</span>
+<span class="s1">    &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">    &quot;id&quot;: 2</span>
+<span class="s1">  }&#39;</span><span class="k">)</span>
+
+<span class="nv">TID</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$SEARCH_RESPONSE</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.result[0].data.tid&#39;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Task ID: </span><span class="nv">$TID</span><span class="s2">&quot;</span>
+<span class="nb">echo</span>
+
+<span class="c1"># Poll for completion</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Step 3: Waiting for Completion ===&quot;</span>
+<span class="nv">START_TIME</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span>
+<span class="nv">DELAY</span><span class="o">=</span><span class="m">1</span>
+
+<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">CURRENT_TIME</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span>
+<span class="w">  </span><span class="nv">ELAPSED</span><span class="o">=</span><span class="k">$((</span><span class="nv">CURRENT_TIME</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">START_TIME</span><span class="k">))</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$ELAPSED</span><span class="w"> </span>-gt<span class="w"> </span><span class="nv">$TIMEOUT</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✗ Timeout after </span><span class="si">${</span><span class="nv">TIMEOUT</span><span class="si">}</span><span class="s2"> seconds&quot;</span>
+<span class="w">    </span><span class="k">break</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="nv">STATUS_RESPONSE</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">      &quot;method&quot;: &quot;get&quot;,</span>
+<span class="s1">      &quot;params&quot;: [{</span>
+<span class="s1">        &quot;url&quot;: &quot;/logview/adom/&#39;</span><span class="si">${</span><span class="nv">ADOM</span><span class="si">}</span><span class="s1">&#39;/logsearch/&#39;</span><span class="si">${</span><span class="nv">TID</span><span class="si">}</span><span class="s1">&#39;&quot;</span>
+<span class="s1">      }],</span>
+<span class="s1">      &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">      &quot;id&quot;: 3</span>
+<span class="s1">    }&#39;</span><span class="k">)</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="nv">STATUS</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$STATUS_RESPONSE</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.result[0].data.status&#39;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">PERCENTAGE</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$STATUS_RESPONSE</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.result[0].data.percentage&#39;</span><span class="k">)</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  Status: </span><span class="nv">$STATUS</span><span class="s2"> - </span><span class="si">${</span><span class="nv">PERCENTAGE</span><span class="si">}</span><span class="s2">% complete&quot;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$STATUS</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PERCENTAGE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Search completed&quot;</span>
+<span class="w">    </span><span class="k">break</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="nv">$DELAY</span>
+<span class="w">  </span><span class="nv">DELAY</span><span class="o">=</span><span class="k">$((</span><span class="nv">DELAY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="k">))</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$DELAY</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nv">DELAY</span><span class="o">=</span><span class="m">10</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+<span class="nb">echo</span>
+
+<span class="c1"># Fetch results</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Step 4: Fetch Results ===&quot;</span>
+<span class="nv">RESULTS</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;get&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{</span>
+<span class="s1">      &quot;url&quot;: &quot;/logview/adom/&#39;</span><span class="si">${</span><span class="nv">ADOM</span><span class="si">}</span><span class="s1">&#39;/logsearch/&#39;</span><span class="si">${</span><span class="nv">TID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">      &quot;data&quot;: {&quot;limit&quot;: 100, &quot;offset&quot;: 0}</span>
+<span class="s1">    }],</span>
+<span class="s1">    &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">    &quot;id&quot;: 4</span>
+<span class="s1">  }&#39;</span><span class="k">)</span>
+
+<span class="nv">TOTAL_LOGS</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$RESULTS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.result[0].data.total_lines&#39;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Retrieved logs. Total: </span><span class="nv">$TOTAL_LOGS</span><span class="s2">&quot;</span>
+<span class="nb">echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Sample logs:&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$RESULTS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.result[0].data.logs[0:3]&#39;</span>
+
+<span class="c1"># Logout</span>
+<span class="nb">echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Step 5: Logout ===&quot;</span>
+curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;exec&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{&quot;url&quot;: &quot;/sys/logout&quot;}],</span>
+<span class="s1">    &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">    &quot;id&quot;: 999</span>
+<span class="s1">  }&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Logged out&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="error-handling">
+<h2>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h2>
+<section id="common-errors">
+<h3>Common Errors<a class="headerlink" href="#common-errors" title="Link to this heading">#</a></h3>
+<section id="error-search-timeout">
+<h4>Error: Search Timeout<a class="headerlink" href="#error-search-timeout" title="Link to this heading">#</a></h4>
+<p><strong>Symptoms:</strong></p>
+<ul class="simple">
+<li><p>Percentage stuck below 100%</p></li>
+<li><p>Elapsed time exceeds timeout</p></li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol class="arabic simple">
+<li><p>Increase timeout value</p></li>
+<li><p>Narrow time range</p></li>
+<li><p>Use more specific filters</p></li>
+<li><p>Check FortiAnalyzer system load</p></li>
+</ol>
+</section>
+<section id="error-code-3-invalid-tid">
+<h4>Error Code -3: Invalid TID<a class="headerlink" href="#error-code-3-invalid-tid" title="Link to this heading">#</a></h4>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid task ID&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Causes:</strong></p>
+<ul class="simple">
+<li><p>TID expired (searches expire after ~30 minutes)</p></li>
+<li><p>Incorrect TID value</p></li>
+<li><p>Search was cancelled</p></li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul class="simple">
+<li><p>Resubmit search</p></li>
+<li><p>Verify TID from Step 1 response</p></li>
+<li><p>Complete search within expiration window</p></li>
+</ul>
+</section>
+<section id="error-no-logs-found">
+<h4>Error: No Logs Found<a class="headerlink" href="#error-no-logs-found" title="Link to this heading">#</a></h4>
+<p><strong>Symptoms:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">total_lines:</span> <span class="pre">0</span></code></p></li>
+<li><p>Empty <code class="docutils literal notranslate"><span class="pre">logs</span></code> array</p></li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol class="arabic simple">
+<li><p>Verify time range includes log data</p></li>
+<li><p>Check filter syntax</p></li>
+<li><p>Confirm device has logs for that period</p></li>
+<li><p>Verify log type is correct</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>💡 Tip: Filter Optimization</strong><br />
+Use specific filters to reduce search time. Filter by srcip/dstip before other fields.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip: Time Range Selection</strong><br />
+Limit searches to necessary time periods. Searching 24 hours is much faster than 7 days.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip: Pagination Strategy</strong><br />
+For large result sets, fetch in batches of 100-1000 to avoid memory issues and timeouts.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>⚠️ Warning: Concurrent Searches</strong><br />
+FortiAnalyzer limits concurrent searches per user. Wait for completion before starting new searches.</p>
+</div></blockquote>
+</section>
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
+<section id="use-case-1-security-incident-investigation">
+<h3>Use Case 1: Security Incident Investigation<a class="headerlink" href="#use-case-1-security-incident-investigation" title="Link to this heading">#</a></h3>
+<p>Investigate suspicious activity from a specific IP:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search for all denied traffic from suspicious IP</span>
+<span class="n">tid</span> <span class="o">=</span> <span class="n">submit_log_search</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
+    <span class="n">device</span><span class="o">=</span><span class="s1">&#39;All_FortiGate&#39;</span><span class="p">,</span>
+    <span class="n">logtype</span><span class="o">=</span><span class="s1">&#39;traffic&#39;</span><span class="p">,</span>
+    <span class="n">filter_expr</span><span class="o">=</span><span class="s1">&#39;srcip==192.168.1.100 and action==deny&#39;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;last-n-hours&#39;</span><span class="p">:</span> <span class="mi">48</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="use-case-2-compliance-reporting">
+<h3>Use Case 2: Compliance Reporting<a class="headerlink" href="#use-case-2-compliance-reporting" title="Link to this heading">#</a></h3>
+<p>Collect all administrative access logs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search admin login events</span>
+<span class="n">tid</span> <span class="o">=</span> <span class="n">submit_log_search</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
+    <span class="n">device</span><span class="o">=</span><span class="s1">&#39;All_FortiGate&#39;</span><span class="p">,</span>
+    <span class="n">logtype</span><span class="o">=</span><span class="s1">&#39;event&#39;</span><span class="p">,</span>
+    <span class="n">filter_expr</span><span class="o">=</span><span class="s1">&#39;logdesc contains &quot;admin&quot; and logdesc contains &quot;login&quot;&#39;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="s1">&#39;2024-11-01 00:00:00&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="s1">&#39;2024-11-30 23:59:59&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="use-case-3-network-troubleshooting">
+<h3>Use Case 3: Network Troubleshooting<a class="headerlink" href="#use-case-3-network-troubleshooting" title="Link to this heading">#</a></h3>
+<p>Find failed connections to a specific service:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search for connection failures to database server</span>
+<span class="n">tid</span> <span class="o">=</span> <span class="n">submit_log_search</span><span class="p">(</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+    <span class="n">adom</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
+    <span class="n">device</span><span class="o">=</span><span class="s1">&#39;All_FortiGate&#39;</span><span class="p">,</span>
+    <span class="n">logtype</span><span class="o">=</span><span class="s1">&#39;traffic&#39;</span><span class="p">,</span>
+    <span class="n">filter_expr</span><span class="o">=</span><span class="s1">&#39;dstip==10.10.10.50 and dstport==3306 and action==deny&#39;</span><span class="p">,</span>
+    <span class="n">time_range</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;last-n-hours&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="related-endpoints">
+<h2>Related Endpoints<a class="headerlink" href="#related-endpoints" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../logview/README.html"><span class="std std-doc">LogView Real-time</span></a> - Real-time log streaming</p></li>
+<li><p><a class="reference internal" href="../reports/run-report.html"><span class="std std-doc">Report Generation</span></a> - Scheduled log reports</p></li>
+<li><p><a class="reference internal" href="../logview/README.html"><span class="std std-doc">Analytics Queries</span></a> - Advanced analytics</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<p>See <a class="reference internal" href="##common-issues"><span class="xref myst">Common Errors</span></a> section above for detailed troubleshooting.</p>
+</section>
+<hr class="docutils" />
+<section id="related-topics-log-search-logview-forensics-security-investigation">
+<h2><strong>Related Topics:</strong> log-search, logview, forensics, security-investigation<a class="headerlink" href="#related-topics-log-search-logview-forensics-security-investigation" title="Link to this heading">#</a></h2>
+<p><strong>Last Updated:</strong> 2025-11-09
+<strong>API Version:</strong> 7.6.4+</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="system-status.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">System Status</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-diagram">Workflow Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-endpoint">Step 1 Endpoint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-endpoint">Step 2 Endpoint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-submit-search-query">Step 1: Submit Search Query</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-types">Log Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-range-format">Time Range Format</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-syntax">Filter Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-example">Request Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-poll-status-and-fetch-results">Step 2: Poll Status and Fetch Results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polling-strategy">Polling Strategy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Request Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-format">Response Format</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#while-processing">While Processing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#when-complete">When Complete</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-implementation">Complete Implementation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-with-full-workflow">Python Example with Full Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curl-example">cURL Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-search-timeout">Error: Search Timeout</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-code-3-invalid-tid">Error Code -3: Invalid TID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-no-logs-found">Error: No Logs Found</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-security-incident-investigation">Use Case 1: Security Incident Investigation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-compliance-reporting">Use Case 2: Compliance Reporting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-3-network-troubleshooting">Use Case 3: Network Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-endpoints">Related Endpoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-topics-log-search-logview-forensics-security-investigation"><strong>Related Topics:</strong> log-search, logview, forensics, security-investigation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roland Stierli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Fortinet.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Nov 18, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1262 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>FortiAnalyzer API Documentation Structure &#8212; Project name not set 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/lightbox.min.css?v=6e7d0de0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../_static/js/lightbox2-options.js?v=b4db3a7c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/DOCUMENTATION_STRUCTURE';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Nov 18, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/fortianalyzer_api_howto.png" class="logo__image only-light" alt="Project name not set 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../_static/fortianalyzer_api_howto.png" class="logo__image only-dark" alt="Project name not set 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/authentication.html">Authentication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Authentication</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="login-and-logout/login.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="login-and-logout/logout.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortianalyzercloudlogin/forticloud-token.html">FortiCloud Token Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortianalyzercloudlogin/get-session-id.html">Get Session ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device Manager (15 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fabric-viewasset-identity-center/get-ueba-endpoints-by-epid.html">Get UEBA Endpoints by Endpoint ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fabric-viewasset-identity-center/get-ueba-endpoints-by-os.html">Get UEBA Endpoints by Operating System</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Log Management (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-ip-dst.html">Search Traffic Logs by Destination IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-app-ctrl.html">Search Application Control Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-attack---botnet.html">Search Attack Logs - Botnet Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-attack---sessionid.html">Search Attack Logs - By Session ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-attack---signature.html">Search Attack Logs - IPS Signatures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-malware---dtypevirus.html">Search Malware Logs - dtype=Virus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-malware---ext-malware-list.html">Search Malware Logs - External Malware List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-malware---outbreak.html">Search Malware Logs - Outbreak Prevention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/create-search-task-for-webfilter-logs.html">Search Webfilter Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/fetch-log-search-result-by-task-id.html">Fetch Log Search Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logview/cancel-log-search-task.html">Cancel Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logviewfabric-of-analyzer/create-search-task-for-ip-on-supervisor.html">Create Fabric Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logviewfabric-of-analyzer/fetch-log-search-result-by-task-id-on-supervisor.html">Fetch Fabric Log Search Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FortiView (17 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fortiviewfortiview-ioc/create-ioc-task.html">Create IOC Analysis Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewfortiview-ioc/fetch-ioc-result-by-task.html">Fetch IOC Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewfortiview-ioc/ioc-drilldown-fgt-request.html">IOC Blacklist Drilldown - Device-Specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewioc/set-ioc-rescan.html">Configure IOC Rescan Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-sources/create-task.html">Create Top Sources Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-sources/fetch-result-by-task.html">Fetch Top Sources Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-applications/topapplications.html">Create Top Applications Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-applications/topapplications-w-policyname.html">Top Applications Filtered by Policy Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-applications/fetch-result-by-task.html">Fetch Top Applications Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-threats/create-task.html">Create Top Threats Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewtop-threats/fetch-result-by-task.html">Fetch Top Threats Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewsecure-sd-wan/create-task-sd-wan-health-overview.html">SD-WAN Interface Health Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewsecure-sd-wan/create-task-sd-wan-application.html">SD-WAN Application Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewsecure-sd-wan/create-task-sd-wan-interface-bandwidth-line.html">SD-WAN Interface Bandwidth Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewsecure-sd-wan/create-task-sd-wan-top-talkers.html">SD-WAN Top Talkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewsecure-sd-wan/create-task-sd-wan-audio-mos-score.html">SD-WAN Audio MOS Quality Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortiviewsecure-sd-wan/fetch-result-by-task-id.html">Fetch SD-WAN Results by Task ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Incidents &amp; Events (20 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/get-eventhandler.html">Get Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/add-fabric-connector-eventhandler.html">Add Fabric Connector to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/get-fabric-connector-eventhandler.html">Get Fabric Connector Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/delete-fabric-connector-eventhandler.html">Delete Fabric Connector from Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/add-subnet-eventhandler.html">Add Subnet to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/update-eventhandler-description.html">Update Event Handler Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/update-eventhandler-taget-enable.html">Update Event Handler Target Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/disable-eventhandler.html">Disable Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setup/upload-eventhandler-rework.html">Upload Event Handler Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setupsubnets/get-subnet-list.html">Get Subnet Address Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setupsubnets/add-subnet.html">Add Subnet Address Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setupsubnets/add-subnet-group.html">Add Subnet Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setupsubnets/get-subnet-groups.html">Get Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsevent-handlers-setupsubnets/update-subnet-groups.html">Update Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsautomation-connectors/get-fabric-conector.html">Get Automation Connectors (Webhooks)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsautomation-connectors/add-fabric-conector.html">Add Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventsautomation-connectors/delete-fabric-conector.html">Delete Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventseventmgmt-alerts/get-ips-alerts.html">Get IPS Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventseventmgmt-alerts/get-sdwan-alerts.html">Get SD-WAN Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incidents-eventseventmgmt-alerts/get-events-malicious-by-ep.html">Get Malicious Events by Endpoint</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reports (22 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reports/run-report.html">Run Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/run-report-w-fromgui.html">Run Report from GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/download-report.html">Download Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/download-report-template.html">Download Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/get-report-templates.html">Get Report Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/get-report-layouts.html">Get Report Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/get-report-layouts-no-filters.html">Get Report Layouts Without Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/get-report-layouts-eg-dailysummery.html">Get Specific Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/export-report-layout.html">Export Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/clone-report-templat.html">Clone Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/import-report.html">Import Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/get-report-charts.html">Get Report Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/add-schedule.html">Add Report Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/add-schedule-w-faz-and-adom-filter.html">Add Report Schedule with FAZ and ADOM Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/add-schedule-w-faz-and-adom-filter-list.html">Add Report Schedule with FAZ and ADOM Filter List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/add-schedule-w-srcip-filter.html">Add Report Schedule with Source IP Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/get-report-schedules.html">Get Report Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports/enable-hcache-socfilters.html">Enable HCache SOC Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reportsfolders/get-report-folder.html">Get Report Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reportsfolders/add-report-folder-64.html">Add Report Folder (FortiAnalyzer 6.4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reportsfolders/add-report-folder-70.html">Add Report Folder (FortiAnalyzer 7.0)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reportsfolders/delete-report-folder.html">Delete Report Folder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">System Settings (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="system-settings/get-system-status.html">Get System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settings/get-systme-performance.html">Get System Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settings/get-admin-users.html">Get Admin Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settings/get-cert.html">Get Certificates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settings/get-info-from-managed-devices.html">Get Managed Device Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settings/restart.html">Restart FortiAnalyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingsfabric-of-faz/add-farbic-of-faz-group.html">Add Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingsfabric-of-faz/update-farbic-of-faz-group.html">Update Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingsfabric-of-faz/add-farbic-of-faz-group-with-members.html">Add Fabric of FortiAnalyzer Group with Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingslogforwarding/get-logforward.html">Get Log Forwarding Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingslogforwarding/get-logforward-devicefilter.html">Get Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingslogforwarding/add-logforward-devicefilter.html">Add Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settingslogforwarding/delete-logforward-devicefilter.html">Delete Log Forward Device Filter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Pilots</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pilot/system-status.html">System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilot/logview-search.html">LogView Search</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/DOCUMENTATION_STRUCTURE.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>FortiAnalyzer API Documentation Structure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-table-of-contents">Proposed Table of Contents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">1. Getting Started</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts">2. Core Concepts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-manager">3. Device Manager</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#device-operations-device-manager">3.1 Device Operations (device-manager/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#asset-identity-fabric-viewasset-identity-center">3.2 Asset &amp; Identity (fabric-viewasset-identity-center/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-management-logview">4. Log Management (LogView)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#log-search-retrieval-logview">4.1 Log Search &amp; Retrieval (logview/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fabric-of-analyzer-logviewfabric-of-analyzer">4.2 Fabric of Analyzer (logviewfabric-of-analyzer/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fortiview">5. FortiView</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#threat-intelligence-fortiviewfortiview-ioc-fortiviewioc">5.1 Threat Intelligence (fortiviewfortiview-ioc/, fortiviewioc/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#top-sources-fortiviewtop-sources">5.2 Top Sources (fortiviewtop-sources/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#top-applications-fortiviewtop-applications">5.3 Top Applications (fortiviewtop-applications/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#top-threats-fortiviewtop-threats">5.4 Top Threats (fortiviewtop-threats/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sd-wan-analytics-fortiviewsecure-sd-wan">5.5 SD-WAN Analytics (fortiviewsecure-sd-wan/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incidents-events">6. Incidents &amp; Events</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#event-handlers-incidents-eventsevent-handlers-setup">6.1 Event Handlers (incidents-eventsevent-handlers-setup/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#handler-subnets-incidents-eventsevent-handlers-setupsubnets">6.2 Handler Subnets (incidents-eventsevent-handlers-setupsubnets/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#automation-connectors-incidents-eventsautomation-connectors">6.3 Automation Connectors (incidents-eventsautomation-connectors/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alert-management-incidents-eventseventmgmt-alerts">6.4 Alert Management (incidents-eventseventmgmt-alerts/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">7. Reports</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#report-configuration-reports">7.1 Report Configuration (reports/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#report-organization-reportsfolders">7.2 Report Organization (reportsfolders/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#system-settings">8. System Settings</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#system-information-system-settings">8.1 System Information (system-settings/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fabric-of-fortianalyzer-system-settingsfabric-of-faz">8.2 Fabric of FortiAnalyzer (system-settingsfabric-of-faz/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#log-forwarding-system-settingslogforwarding">8.3 Log Forwarding (system-settingslogforwarding/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendices">9. Appendices</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-a-complete-api-reference">Appendix A: Complete API Reference</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-b-examples-use-cases">Appendix B: Examples &amp; Use Cases</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-c-code-libraries-sdks">Appendix C: Code Libraries &amp; SDKs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-d-troubleshooting">Appendix D: Troubleshooting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-e-migration-guides">Appendix E: Migration Guides</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-navigation-structure">Documentation Navigation Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-sidebar-organization">Recommended Sidebar Organization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-this-structure">Key Features of This Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui-aligned-navigation">1. GUI-Aligned Navigation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#progressive-disclosure">2. Progressive Disclosure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-oriented-organization">3. Task-Oriented Organization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-patterns">4. Consistent Patterns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-structure-mapping">File Structure Mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-directory-documentation-section">Current Directory → Documentation Section</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-notes">Implementation Notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-read-the-docs-sphinx-myst">For Read the Docs (Sphinx/MyST)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-additional-content">Recommended Additional Content</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#landing-page-highlights">Landing Page Highlights</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-tutorial">Getting Started Tutorial</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#common-workflows">Common Workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#success-metrics">Success Metrics</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="fortianalyzer-api-documentation-structure">
+<h1>FortiAnalyzer API Documentation Structure<a class="headerlink" href="#fortianalyzer-api-documentation-structure" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This documentation covers <strong>108 API operations</strong> organized following the FortiAnalyzer GUI structure for intuitive navigation. The structure mirrors how users interact with FortiAnalyzer’s web interface, making it easy to find API equivalents of GUI operations.</p>
+</section>
+<hr class="docutils" />
+<section id="proposed-table-of-contents">
+<h2>Proposed Table of Contents<a class="headerlink" href="#proposed-table-of-contents" title="Link to this heading">#</a></h2>
+<section id="getting-started">
+<h3>1. Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Introduction</strong></p>
+<ul>
+<li><p>About FortiAnalyzer API</p></li>
+<li><p>API Architecture &amp; Design Patterns</p></li>
+<li><p>Version Compatibility (7.4.x - 7.6.x+)</p></li>
+</ul>
+</li>
+<li><p><strong>Quick Start Guide</strong></p>
+<ul>
+<li><p>Prerequisites</p></li>
+<li><p>First API Call</p></li>
+<li><p>Common Use Cases</p></li>
+</ul>
+</li>
+<li><p><strong>Authentication</strong></p>
+<ul>
+<li><p>Session-Based Authentication (login-and-logout/)</p></li>
+<li><p>API Key Authentication</p></li>
+<li><p>FortiCloud Token Authentication (fortianalyzercloudlogin/)</p></li>
+<li><p>Best Practices for Credential Management</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="core-concepts">
+<h3>2. Core Concepts<a class="headerlink" href="#core-concepts" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Request/Response Format</strong></p>
+<ul>
+<li><p>JSON-RPC Structure</p></li>
+<li><p>Method Types (get, add, update, delete, exec, set)</p></li>
+<li><p>Error Handling &amp; Status Codes</p></li>
+</ul>
+</li>
+<li><p><strong>Asynchronous Operations</strong></p>
+<ul>
+<li><p>Two-Step Workflow Pattern (TID-based)</p></li>
+<li><p>Polling Strategies</p></li>
+<li><p>Timeout Handling</p></li>
+</ul>
+</li>
+<li><p><strong>ADOM Management</strong></p>
+<ul>
+<li><p>Understanding Administrative Domains</p></li>
+<li><p>Multi-Tenancy Considerations</p></li>
+</ul>
+</li>
+<li><p><strong>Pagination &amp; Filtering</strong></p>
+<ul>
+<li><p>Limit and Offset Parameters</p></li>
+<li><p>Filter Expressions</p></li>
+<li><p>Sorting Results</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="device-manager">
+<h3>3. Device Manager<a class="headerlink" href="#device-manager" title="Link to this heading">#</a></h3>
+<p><em>15 API operations - Managing FortiGate devices and Security Fabric</em></p>
+<section id="device-operations-device-manager">
+<h4>3.1 Device Operations (device-manager/)<a class="headerlink" href="#device-operations-device-manager" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Add Managed Device</p></li>
+<li><p>Get Device List</p></li>
+<li><p>Get Device by Name/Serial</p></li>
+<li><p>Update Device Configuration</p></li>
+<li><p>Delete Device</p></li>
+<li><p>Refresh Device Connection</p></li>
+<li><p>Device Authorization</p></li>
+<li><p>Device Group Management</p></li>
+<li><p>Install Policy to Device</p></li>
+<li><p>Preview Config Changes</p></li>
+<li><p>Get Install Status</p></li>
+<li><p>Install Targets Management</p></li>
+<li><p>Revision History</p></li>
+</ul>
+</section>
+<section id="asset-identity-fabric-viewasset-identity-center">
+<h4>3.2 Asset &amp; Identity (fabric-viewasset-identity-center/)<a class="headerlink" href="#asset-identity-fabric-viewasset-identity-center" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get UEBA Endpoints by Endpoint ID</p></li>
+<li><p>Get UEBA Endpoints by Operating System</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="log-management-logview">
+<h3>4. Log Management (LogView)<a class="headerlink" href="#log-management-logview" title="Link to this heading">#</a></h3>
+<p><em>13 API operations - Log search, retrieval, and analysis</em></p>
+<section id="log-search-retrieval-logview">
+<h4>4.1 Log Search &amp; Retrieval (logview/)<a class="headerlink" href="#log-search-retrieval-logview" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Core Log Operations</strong></p>
+<ul>
+<li><p>Submit Log Search Task</p></li>
+<li><p>Fetch Search Results by TID</p></li>
+<li><p>Check Search Status</p></li>
+<li><p>Cancel Search Task</p></li>
+</ul>
+</li>
+<li><p><strong>Advanced Search</strong></p>
+<ul>
+<li><p>Log Search with Time Range</p></li>
+<li><p>Log Search with Custom Filters</p></li>
+<li><p>Multi-Device Log Search</p></li>
+<li><p>Log Type Filtering (traffic, event, threat, etc.)</p></li>
+</ul>
+</li>
+<li><p><strong>Log Export</strong></p>
+<ul>
+<li><p>Export to CSV</p></li>
+<li><p>Export to PDF</p></li>
+<li><p>Download Raw Logs</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fabric-of-analyzer-logviewfabric-of-analyzer">
+<h4>4.2 Fabric of Analyzer (logviewfabric-of-analyzer/)<a class="headerlink" href="#fabric-of-analyzer-logviewfabric-of-analyzer" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Create Distributed Search Task (Supervisor-Member Topology)</p></li>
+<li><p>Fetch Fabric Search Results by TID</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="fortiview">
+<h3>5. FortiView<a class="headerlink" href="#fortiview" title="Link to this heading">#</a></h3>
+<p><em>17 API operations - Real-time and historical visualization data</em></p>
+<section id="threat-intelligence-fortiviewfortiview-ioc-fortiviewioc">
+<h4>5.1 Threat Intelligence (fortiviewfortiview-ioc/, fortiviewioc/)<a class="headerlink" href="#threat-intelligence-fortiviewfortiview-ioc-fortiviewioc" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Create IOC Analysis Task</p></li>
+<li><p>Fetch IOC Results by TID</p></li>
+<li><p>IOC Drilldown by FortiGate</p></li>
+<li><p>Configure IOC Rescan Settings</p></li>
+</ul>
+</section>
+<section id="top-sources-fortiviewtop-sources">
+<h4>5.2 Top Sources (fortiviewtop-sources/)<a class="headerlink" href="#top-sources-fortiviewtop-sources" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Create Top Sources Task</p></li>
+<li><p>Fetch Top Sources Results</p></li>
+</ul>
+</section>
+<section id="top-applications-fortiviewtop-applications">
+<h4>5.3 Top Applications (fortiviewtop-applications/)<a class="headerlink" href="#top-applications-fortiviewtop-applications" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Create Top Applications Task</p></li>
+<li><p>Create Task with Policy Name Filter</p></li>
+<li><p>Fetch Results by TID</p></li>
+</ul>
+</section>
+<section id="top-threats-fortiviewtop-threats">
+<h4>5.4 Top Threats (fortiviewtop-threats/)<a class="headerlink" href="#top-threats-fortiviewtop-threats" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Create Top Threats Task</p></li>
+<li><p>Fetch Top Threats Results</p></li>
+</ul>
+</section>
+<section id="sd-wan-analytics-fortiviewsecure-sd-wan">
+<h4>5.5 SD-WAN Analytics (fortiviewsecure-sd-wan/)<a class="headerlink" href="#sd-wan-analytics-fortiviewsecure-sd-wan" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>SD-WAN Health Overview</p></li>
+<li><p>SD-WAN Application Performance</p></li>
+<li><p>SD-WAN Interface Bandwidth</p></li>
+<li><p>SD-WAN Top Talkers</p></li>
+<li><p>SD-WAN Audio MOS Score</p></li>
+<li><p>Fetch SD-WAN Results by TID</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="incidents-events">
+<h3>6. Incidents &amp; Events<a class="headerlink" href="#incidents-events" title="Link to this heading">#</a></h3>
+<p><em>20 API operations - Security event management and automation</em></p>
+<section id="event-handlers-incidents-eventsevent-handlers-setup">
+<h4>6.1 Event Handlers (incidents-eventsevent-handlers-setup/)<a class="headerlink" href="#event-handlers-incidents-eventsevent-handlers-setup" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get Event Handlers</p></li>
+<li><p>Add Fabric Connector to Handler</p></li>
+<li><p>Get Fabric Connector Handlers</p></li>
+<li><p>Delete Fabric Connector Handler</p></li>
+<li><p>Add Subnet to Event Handler</p></li>
+<li><p>Update Handler Description</p></li>
+<li><p>Enable/Disable Handler Targets</p></li>
+<li><p>Disable Event Handler</p></li>
+<li><p>Upload/Rework Event Handler Config</p></li>
+</ul>
+</section>
+<section id="handler-subnets-incidents-eventsevent-handlers-setupsubnets">
+<h4>6.2 Handler Subnets (incidents-eventsevent-handlers-setupsubnets/)<a class="headerlink" href="#handler-subnets-incidents-eventsevent-handlers-setupsubnets" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get Subnet List</p></li>
+<li><p>Add Subnet</p></li>
+<li><p>Add Subnet Group</p></li>
+<li><p>Get Subnet Groups</p></li>
+<li><p>Update Subnet Groups</p></li>
+</ul>
+</section>
+<section id="automation-connectors-incidents-eventsautomation-connectors">
+<h4>6.3 Automation Connectors (incidents-eventsautomation-connectors/)<a class="headerlink" href="#automation-connectors-incidents-eventsautomation-connectors" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get Fabric Connectors (Webhooks/SIEM)</p></li>
+<li><p>Add Fabric Connector</p></li>
+<li><p>Delete Fabric Connector</p></li>
+</ul>
+</section>
+<section id="alert-management-incidents-eventseventmgmt-alerts">
+<h4>6.4 Alert Management (incidents-eventseventmgmt-alerts/)<a class="headerlink" href="#alert-management-incidents-eventseventmgmt-alerts" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get IPS Alerts</p></li>
+<li><p>Get SD-WAN Alerts</p></li>
+<li><p>Get Malicious Events by Endpoint</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="reports">
+<h3>7. Reports<a class="headerlink" href="#reports" title="Link to this heading">#</a></h3>
+<p><em>22 API operations - Report generation, scheduling, and management</em></p>
+<section id="report-configuration-reports">
+<h4>7.1 Report Configuration (reports/)<a class="headerlink" href="#report-configuration-reports" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Templates &amp; Layouts</strong></p>
+<ul>
+<li><p>Get Report Templates</p></li>
+<li><p>Get Report Layouts</p></li>
+<li><p>Get Report Layouts (No Filters)</p></li>
+<li><p>Get Specific Layout (e.g., Daily Summary)</p></li>
+<li><p>Export Report Layout</p></li>
+<li><p>Clone Report Template</p></li>
+<li><p>Import Report Configuration</p></li>
+</ul>
+</li>
+<li><p><strong>Report Charts</strong></p>
+<ul>
+<li><p>Get Report Charts</p></li>
+</ul>
+</li>
+<li><p><strong>Report Scheduling</strong></p>
+<ul>
+<li><p>Add Schedule</p></li>
+<li><p>Add Schedule with FAZ/ADOM Filter</p></li>
+<li><p>Add Schedule with Filter List</p></li>
+<li><p>Add Schedule with Source IP Filter</p></li>
+<li><p>Get Report Schedules</p></li>
+</ul>
+</li>
+<li><p><strong>Report Generation &amp; Download</strong></p>
+<ul>
+<li><p>Run Report (On-Demand)</p></li>
+<li><p>Run Report from GUI Parameters</p></li>
+<li><p>Download Report</p></li>
+<li><p>Download Report Template</p></li>
+</ul>
+</li>
+<li><p><strong>Optimization</strong></p>
+<ul>
+<li><p>Enable HCache &amp; SOC Filters</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="report-organization-reportsfolders">
+<h4>7.2 Report Organization (reportsfolders/)<a class="headerlink" href="#report-organization-reportsfolders" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get Report Folders</p></li>
+<li><p>Add Report Folder (v6.4 Format)</p></li>
+<li><p>Add Report Folder (v7.0+ Format)</p></li>
+<li><p>Delete Report Folder</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="system-settings">
+<h3>8. System Settings<a class="headerlink" href="#system-settings" title="Link to this heading">#</a></h3>
+<p><em>13 API operations - FortiAnalyzer system configuration</em></p>
+<section id="system-information-system-settings">
+<h4>8.1 System Information (system-settings/)<a class="headerlink" href="#system-information-system-settings" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get System Status</p></li>
+<li><p>Get System Performance</p></li>
+<li><p>Get Admin Users</p></li>
+<li><p>Get SSL Certificates</p></li>
+<li><p>Get Managed Device Info</p></li>
+<li><p>Restart FortiAnalyzer</p></li>
+</ul>
+</section>
+<section id="fabric-of-fortianalyzer-system-settingsfabric-of-faz">
+<h4>8.2 Fabric of FortiAnalyzer (system-settingsfabric-of-faz/)<a class="headerlink" href="#fabric-of-fortianalyzer-system-settingsfabric-of-faz" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Add FAZ Fabric Group</p></li>
+<li><p>Update FAZ Fabric Group</p></li>
+<li><p>Add Members to Fabric Group</p></li>
+</ul>
+</section>
+<section id="log-forwarding-system-settingslogforwarding">
+<h4>8.3 Log Forwarding (system-settingslogforwarding/)<a class="headerlink" href="#log-forwarding-system-settingslogforwarding" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Get Log Forward Configuration</p></li>
+<li><p>Get Log Forward Device Filters</p></li>
+<li><p>Add Log Forward Device Filter</p></li>
+<li><p>Delete Log Forward Device Filter</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="appendices">
+<h3>9. Appendices<a class="headerlink" href="#appendices" title="Link to this heading">#</a></h3>
+<section id="appendix-a-complete-api-reference">
+<h4>Appendix A: Complete API Reference<a class="headerlink" href="#appendix-a-complete-api-reference" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Alphabetical Endpoint Index</p></li>
+<li><p>Endpoint Quick Reference Table</p></li>
+</ul>
+</section>
+<section id="appendix-b-examples-use-cases">
+<h4>Appendix B: Examples &amp; Use Cases<a class="headerlink" href="#appendix-b-examples-use-cases" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Security Incident Investigation Workflow</p></li>
+<li><p>Compliance Reporting Automation</p></li>
+<li><p>Multi-Site Log Aggregation</p></li>
+<li><p>Automated Threat Response</p></li>
+<li><p>Custom Dashboard Integration</p></li>
+</ul>
+</section>
+<section id="appendix-c-code-libraries-sdks">
+<h4>Appendix C: Code Libraries &amp; SDKs<a class="headerlink" href="#appendix-c-code-libraries-sdks" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Python SDK Examples</p></li>
+<li><p>cURL Command Reference</p></li>
+<li><p>Postman Collection Usage</p></li>
+</ul>
+</section>
+<section id="appendix-d-troubleshooting">
+<h4>Appendix D: Troubleshooting<a class="headerlink" href="#appendix-d-troubleshooting" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Common Error Codes</p></li>
+<li><p>API Rate Limiting</p></li>
+<li><p>Session Management Issues</p></li>
+<li><p>Performance Optimization</p></li>
+<li><p>Debugging Techniques</p></li>
+</ul>
+</section>
+<section id="appendix-e-migration-guides">
+<h4>Appendix E: Migration Guides<a class="headerlink" href="#appendix-e-migration-guides" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Migrating from v7.4 to v7.6</p></li>
+<li><p>Deprecated Features</p></li>
+<li><p>Breaking Changes</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="documentation-navigation-structure">
+<h2>Documentation Navigation Structure<a class="headerlink" href="#documentation-navigation-structure" title="Link to this heading">#</a></h2>
+<section id="recommended-sidebar-organization">
+<h3>Recommended Sidebar Organization<a class="headerlink" href="#recommended-sidebar-organization" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── 📖 Getting Started
+│   ├── Introduction
+│   ├── Quick Start
+│   └── Authentication
+│
+├── 🎓 Core Concepts
+│   ├── Request/Response Format
+│   ├── Asynchronous Operations
+│   └── ADOM Management
+│
+├── 🖥️ Device Manager (15)
+│   ├── Device Operations
+│   └── Asset &amp; Identity (UEBA)
+│
+├── 📊 Log Management (13)
+│   ├── Log Search &amp; Retrieval
+│   └── Fabric of Analyzer
+│
+├── 👁️ FortiView (17)
+│   ├── Threat Intelligence (IOC)
+│   ├── Top Sources
+│   ├── Top Applications
+│   ├── Top Threats
+│   └── SD-WAN Analytics
+│
+├── 🚨 Incidents &amp; Events (20)
+│   ├── Event Handlers
+│   ├── Handler Subnets
+│   ├── Automation Connectors
+│   └── Alert Management
+│
+├── 📄 Reports (22)
+│   ├── Report Configuration
+│   └── Report Organization
+│
+├── ⚙️ System Settings (13)
+│   ├── System Information
+│   ├── Fabric of FortiAnalyzer
+│   └── Log Forwarding
+│
+└── 📚 Appendices
+    ├── Complete API Reference
+    ├── Examples &amp; Use Cases
+    ├── Code Libraries
+    ├── Troubleshooting
+    └── Migration Guides
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-features-of-this-structure">
+<h2>Key Features of This Structure<a class="headerlink" href="#key-features-of-this-structure" title="Link to this heading">#</a></h2>
+<section id="gui-aligned-navigation">
+<h3>1. GUI-Aligned Navigation<a class="headerlink" href="#gui-aligned-navigation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Mirrors FortiAnalyzer web interface organization</p></li>
+<li><p>Users can easily find API equivalents of GUI operations</p></li>
+<li><p>Familiar mental model for existing FortiAnalyzer administrators</p></li>
+</ul>
+</section>
+<section id="progressive-disclosure">
+<h3>2. Progressive Disclosure<a class="headerlink" href="#progressive-disclosure" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Getting Started</strong> → Quick wins for new users</p></li>
+<li><p><strong>Core Concepts</strong> → Deep understanding for power users</p></li>
+<li><p><strong>API Reference</strong> → Organized by functional area</p></li>
+<li><p><strong>Appendices</strong> → Advanced topics and troubleshooting</p></li>
+</ul>
+</section>
+<section id="task-oriented-organization">
+<h3>3. Task-Oriented Organization<a class="headerlink" href="#task-oriented-organization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Grouped by what users want to accomplish</p></li>
+<li><p>Related operations grouped together</p></li>
+<li><p>Clear endpoint counts for each section</p></li>
+</ul>
+</section>
+<section id="consistent-patterns">
+<h3>4. Consistent Patterns<a class="headerlink" href="#consistent-patterns" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Every endpoint page includes:</p>
+<ul>
+<li><p>✅ Verification badge</p></li>
+<li><p>📝 Overview with use cases</p></li>
+<li><p>📋 Parameter tables</p></li>
+<li><p>{tab-item} REQUEST/RESPONSE examples</p></li>
+<li><p>🐍 Complete Python examples</p></li>
+<li><p>💡 Best practices &amp; tips</p></li>
+<li><p>📅 Last updated date</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="file-structure-mapping">
+<h2>File Structure Mapping<a class="headerlink" href="#file-structure-mapping" title="Link to this heading">#</a></h2>
+<section id="current-directory-documentation-section">
+<h3>Current Directory → Documentation Section<a class="headerlink" href="#current-directory-documentation-section" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>login-and-logout/                  → Getting Started &gt; Authentication
+fortianalyzercloudlogin/           → Getting Started &gt; Authentication
+
+device-manager/                    → Device Manager &gt; Device Operations
+fabric-viewasset-identity-center/  → Device Manager &gt; Asset &amp; Identity
+
+logview/                           → Log Management &gt; Log Search &amp; Retrieval
+logviewfabric-of-analyzer/         → Log Management &gt; Fabric of Analyzer
+
+fortiviewfortiview-ioc/            → FortiView &gt; Threat Intelligence
+fortiviewioc/                      → FortiView &gt; Threat Intelligence
+fortiviewtop-sources/              → FortiView &gt; Top Sources
+fortiviewtop-applications/         → FortiView &gt; Top Applications
+fortiviewtop-threats/              → FortiView &gt; Top Threats
+fortiviewsecure-sd-wan/            → FortiView &gt; SD-WAN Analytics
+
+incidents-eventsevent-handlers-setup/      → Incidents &amp; Events &gt; Event Handlers
+incidents-eventsevent-handlers-setupsubnets/ → Incidents &amp; Events &gt; Handler Subnets
+incidents-eventsautomation-connectors/     → Incidents &amp; Events &gt; Automation Connectors
+incidents-eventseventmgmt-alerts/          → Incidents &amp; Events &gt; Alert Management
+
+reports/                           → Reports &gt; Report Configuration
+reportsfolders/                    → Reports &gt; Report Organization
+
+system-settings/                   → System Settings &gt; System Information
+system-settingsfabric-of-faz/      → System Settings &gt; Fabric of FortiAnalyzer
+system-settingslogforwarding/      → System Settings &gt; Log Forwarding
+
+pilot/                             → Appendices &gt; Examples &amp; Use Cases
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="implementation-notes">
+<h2>Implementation Notes<a class="headerlink" href="#implementation-notes" title="Link to this heading">#</a></h2>
+<section id="for-read-the-docs-sphinx-myst">
+<h3>For Read the Docs (Sphinx/MyST)<a class="headerlink" href="#for-read-the-docs-sphinx-myst" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Create index.md</strong> - Main landing page with overview</p></li>
+<li><p><strong>Create _toc.yml</strong> - Table of contents structure</p></li>
+<li><p><strong>Organize by folders</strong> - Group related endpoints</p></li>
+<li><p><strong>Cross-references</strong> - Link related operations</p></li>
+<li><p><strong>Search optimization</strong> - Use descriptive titles and keywords</p></li>
+</ol>
+</section>
+<section id="recommended-additional-content">
+<h3>Recommended Additional Content<a class="headerlink" href="#recommended-additional-content" title="Link to this heading">#</a></h3>
+<section id="landing-page-highlights">
+<h4>Landing Page Highlights<a class="headerlink" href="#landing-page-highlights" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>API endpoint count (108 total)</p></li>
+<li><p>Version compatibility matrix</p></li>
+<li><p>Quick start video/GIF</p></li>
+<li><p>Popular endpoint cards (top 10 most used)</p></li>
+</ul>
+</section>
+<section id="getting-started-tutorial">
+<h4>Getting Started Tutorial<a class="headerlink" href="#getting-started-tutorial" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Authenticate (obtain session)</p></li>
+<li><p>Submit a log search</p></li>
+<li><p>Poll for results</p></li>
+<li><p>Fetch logs</p></li>
+<li><p>Generate a report</p></li>
+<li><p>Logout</p></li>
+</ol>
+</section>
+<section id="common-workflows">
+<h4>Common Workflows<a class="headerlink" href="#common-workflows" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Security Investigation</strong>: IOC → Log Search → Report</p></li>
+<li><p><strong>Compliance Audit</strong>: Device List → Log Search → Scheduled Report</p></li>
+<li><p><strong>Automation</strong>: Event Handler → Webhook → External SIEM</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="success-metrics">
+<h2>Success Metrics<a class="headerlink" href="#success-metrics" title="Link to this heading">#</a></h2>
+<p>This structure should enable users to:</p>
+<ul class="simple">
+<li><p>✅ Find any API operation within 2-3 clicks</p></li>
+<li><p>✅ Understand the two-step async pattern</p></li>
+<li><p>✅ Copy working code examples immediately</p></li>
+<li><p>✅ Follow FortiAnalyzer GUI workflow naturally</p></li>
+<li><p>✅ Implement common use cases without external help</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Total Documented API Operations: 108</strong>
+<strong>Documentation Format: MyST Markdown</strong>
+<strong>Target Platform: Read the Docs</strong>
+<strong>Alignment: FortiAnalyzer GUI Structure</strong></p>
+<hr class="docutils" />
+<p><em>Last Updated: 2025-11-10</em>
+<em>Documentation Version: 1.0</em></p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-table-of-contents">Proposed Table of Contents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">1. Getting Started</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts">2. Core Concepts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-manager">3. Device Manager</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#device-operations-device-manager">3.1 Device Operations (device-manager/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#asset-identity-fabric-viewasset-identity-center">3.2 Asset &amp; Identity (fabric-viewasset-identity-center/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-management-logview">4. Log Management (LogView)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#log-search-retrieval-logview">4.1 Log Search &amp; Retrieval (logview/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fabric-of-analyzer-logviewfabric-of-analyzer">4.2 Fabric of Analyzer (logviewfabric-of-analyzer/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fortiview">5. FortiView</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#threat-intelligence-fortiviewfortiview-ioc-fortiviewioc">5.1 Threat Intelligence (fortiviewfortiview-ioc/, fortiviewioc/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#top-sources-fortiviewtop-sources">5.2 Top Sources (fortiviewtop-sources/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#top-applications-fortiviewtop-applications">5.3 Top Applications (fortiviewtop-applications/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#top-threats-fortiviewtop-threats">5.4 Top Threats (fortiviewtop-threats/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sd-wan-analytics-fortiviewsecure-sd-wan">5.5 SD-WAN Analytics (fortiviewsecure-sd-wan/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incidents-events">6. Incidents &amp; Events</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#event-handlers-incidents-eventsevent-handlers-setup">6.1 Event Handlers (incidents-eventsevent-handlers-setup/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#handler-subnets-incidents-eventsevent-handlers-setupsubnets">6.2 Handler Subnets (incidents-eventsevent-handlers-setupsubnets/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#automation-connectors-incidents-eventsautomation-connectors">6.3 Automation Connectors (incidents-eventsautomation-connectors/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alert-management-incidents-eventseventmgmt-alerts">6.4 Alert Management (incidents-eventseventmgmt-alerts/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">7. Reports</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#report-configuration-reports">7.1 Report Configuration (reports/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#report-organization-reportsfolders">7.2 Report Organization (reportsfolders/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#system-settings">8. System Settings</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#system-information-system-settings">8.1 System Information (system-settings/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fabric-of-fortianalyzer-system-settingsfabric-of-faz">8.2 Fabric of FortiAnalyzer (system-settingsfabric-of-faz/)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#log-forwarding-system-settingslogforwarding">8.3 Log Forwarding (system-settingslogforwarding/)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendices">9. Appendices</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-a-complete-api-reference">Appendix A: Complete API Reference</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-b-examples-use-cases">Appendix B: Examples &amp; Use Cases</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-c-code-libraries-sdks">Appendix C: Code Libraries &amp; SDKs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-d-troubleshooting">Appendix D: Troubleshooting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-e-migration-guides">Appendix E: Migration Guides</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-navigation-structure">Documentation Navigation Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-sidebar-organization">Recommended Sidebar Organization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-this-structure">Key Features of This Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui-aligned-navigation">1. GUI-Aligned Navigation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#progressive-disclosure">2. Progressive Disclosure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-oriented-organization">3. Task-Oriented Organization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-patterns">4. Consistent Patterns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-structure-mapping">File Structure Mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-directory-documentation-section">Current Directory → Documentation Section</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-notes">Implementation Notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-read-the-docs-sphinx-myst">For Read the Docs (Sphinx/MyST)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-additional-content">Recommended Additional Content</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#landing-page-highlights">Landing Page Highlights</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-tutorial">Getting Started Tutorial</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#common-workflows">Common Workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#success-metrics">Success Metrics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roland Stierli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Fortinet.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Nov 18, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

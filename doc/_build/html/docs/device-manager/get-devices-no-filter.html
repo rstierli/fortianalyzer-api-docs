@@ -1,0 +1,1596 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Get Devices (No Filter) &#8212; Project name not set 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/lightbox.min.css?v=6e7d0de0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../_static/js/lightbox2-options.js?v=b4db3a7c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/device-manager/get-devices-no-filter';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Nov 18, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-light" alt="Project name not set 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-dark" alt="Project name not set 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/authentication.html">Authentication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Authentication</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/login.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/logout.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortianalyzercloudlogin/forticloud-token.html">FortiCloud Token Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortianalyzercloudlogin/get-session-id.html">Get Session ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device Manager (15 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-epid.html">Get UEBA Endpoints by Endpoint ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-os.html">Get UEBA Endpoints by Operating System</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Log Management (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-ip-dst.html">Search Traffic Logs by Destination IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-app-ctrl.html">Search Application Control Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---botnet.html">Search Attack Logs - Botnet Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---sessionid.html">Search Attack Logs - By Session ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---signature.html">Search Attack Logs - IPS Signatures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---dtypevirus.html">Search Malware Logs - dtype=Virus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---ext-malware-list.html">Search Malware Logs - External Malware List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---outbreak.html">Search Malware Logs - Outbreak Prevention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-webfilter-logs.html">Search Webfilter Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/fetch-log-search-result-by-task-id.html">Fetch Log Search Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/cancel-log-search-task.html">Cancel Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/create-search-task-for-ip-on-supervisor.html">Create Fabric Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/fetch-log-search-result-by-task-id-on-supervisor.html">Fetch Fabric Log Search Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FortiView (17 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/create-ioc-task.html">Create IOC Analysis Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/fetch-ioc-result-by-task.html">Fetch IOC Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/ioc-drilldown-fgt-request.html">IOC Blacklist Drilldown - Device-Specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewioc/set-ioc-rescan.html">Configure IOC Rescan Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/create-task.html">Create Top Sources Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/fetch-result-by-task.html">Fetch Top Sources Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications.html">Create Top Applications Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications-w-policyname.html">Top Applications Filtered by Policy Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/fetch-result-by-task.html">Fetch Top Applications Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/create-task.html">Create Top Threats Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/fetch-result-by-task.html">Fetch Top Threats Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-health-overview.html">SD-WAN Interface Health Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-application.html">SD-WAN Application Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-interface-bandwidth-line.html">SD-WAN Interface Bandwidth Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-top-talkers.html">SD-WAN Top Talkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-audio-mos-score.html">SD-WAN Audio MOS Quality Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/fetch-result-by-task-id.html">Fetch SD-WAN Results by Task ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Incidents &amp; Events (20 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-eventhandler.html">Get Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-fabric-connector-eventhandler.html">Add Fabric Connector to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-fabric-connector-eventhandler.html">Get Fabric Connector Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/delete-fabric-connector-eventhandler.html">Delete Fabric Connector from Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-subnet-eventhandler.html">Add Subnet to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-description.html">Update Event Handler Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-taget-enable.html">Update Event Handler Target Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/disable-eventhandler.html">Disable Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/upload-eventhandler-rework.html">Upload Event Handler Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-list.html">Get Subnet Address Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet.html">Add Subnet Address Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet-group.html">Add Subnet Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-groups.html">Get Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/update-subnet-groups.html">Update Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/get-fabric-conector.html">Get Automation Connectors (Webhooks)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/add-fabric-conector.html">Add Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/delete-fabric-conector.html">Delete Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-ips-alerts.html">Get IPS Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-sdwan-alerts.html">Get SD-WAN Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-events-malicious-by-ep.html">Get Malicious Events by Endpoint</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reports (22 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report.html">Run Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report-w-fromgui.html">Run Report from GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report.html">Download Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report-template.html">Download Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-templates.html">Get Report Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts.html">Get Report Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-no-filters.html">Get Report Layouts Without Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-eg-dailysummery.html">Get Specific Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/export-report-layout.html">Export Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/clone-report-templat.html">Clone Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/import-report.html">Import Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-charts.html">Get Report Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule.html">Add Report Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter.html">Add Report Schedule with FAZ and ADOM Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter-list.html">Add Report Schedule with FAZ and ADOM Filter List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-srcip-filter.html">Add Report Schedule with Source IP Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-schedules.html">Get Report Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/enable-hcache-socfilters.html">Enable HCache SOC Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/get-report-folder.html">Get Report Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-64.html">Add Report Folder (FortiAnalyzer 6.4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-70.html">Add Report Folder (FortiAnalyzer 7.0)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/delete-report-folder.html">Delete Report Folder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">System Settings (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-system-status.html">Get System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-systme-performance.html">Get System Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-admin-users.html">Get Admin Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-cert.html">Get Certificates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-info-from-managed-devices.html">Get Managed Device Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/restart.html">Restart FortiAnalyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group.html">Add Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/update-farbic-of-faz-group.html">Update Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group-with-members.html">Add Fabric of FortiAnalyzer Group with Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward.html">Get Log Forwarding Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward-devicefilter.html">Get Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/add-logforward-devicefilter.html">Add Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/delete-logforward-devicefilter.html">Delete Log Forward Device Filter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Pilots</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pilot/system-status.html">System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pilot/logview-search.html">LogView Search</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/device-manager/get-devices-no-filter.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Get Devices (No Filter)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-variants">Endpoint Variants</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-format">Request Format</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-device-fields">Common Device Fields</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-format">Response Format</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vdom-object-structure">VDOM Object Structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-example">Complete Example</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example">Python Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curl-example">cURL Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-devices">Filtering Devices</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-by-connection-status">Filter by Connection Status</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-by-platform">Filter by Platform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-selection">Field Selection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-build-device-selection-dropdown">Use Case 1: Build Device Selection Dropdown</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-device-health-monitoring">Use Case 2: Device Health Monitoring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-3-device-inventory-export">Use Case 3: Device Inventory Export</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-code-10-session-timeout">Error Code -10: Session Timeout</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-code-3-invalid-adom">Error Code -3: Invalid ADOM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-empty-device-list">Error: Empty Device List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-endpoints">Related Endpoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-missing-devices-in-response">Issue: Missing Devices in Response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-conn-status-always-shows-0">Issue: conn_status Always Shows 0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-performance-issues-with-large-device-lists">Issue: Performance Issues with Large Device Lists</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="get-devices-no-filter">
+<h1>Get Devices (No Filter)<a class="headerlink" href="#get-devices-no-filter" title="Link to this heading">#</a></h1>
+<p>Retrieve a list of all managed devices in a specific ADOM or across all ADOMs with complete details.</p>
+<blockquote>
+<div><p><strong>✅ All code examples tested:</strong> All Python and cURL examples in this guide have been verified against a live FortiAnalyzer system and work as documented.</p>
+</div></blockquote>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This endpoint retrieves all managed devices from FortiAnalyzer without filtering. Devices represent FortiGate firewalls, FortiMail servers, Syslog devices, and other Fortinet products that send logs to FortiAnalyzer for centralized logging and analysis.</p>
+<p><strong>Common use cases:</strong></p>
+<ul class="simple">
+<li><p>Inventory all managed devices in your infrastructure</p></li>
+<li><p>Build device selection dropdowns in applications</p></li>
+<li><p>Monitor device connection status and health</p></li>
+<li><p>Audit device configurations and versions</p></li>
+<li><p>Generate compliance and asset management reports</p></li>
+<li><p>Track device-to-ADOM assignments</p></li>
+</ul>
+</section>
+<section id="endpoint-details">
+<h2>Endpoint Details<a class="headerlink" href="#endpoint-details" title="Link to this heading">#</a></h2>
+<p><strong>Method:</strong> <code class="docutils literal notranslate"><span class="pre">POST</span></code>
+<strong>URL:</strong> <code class="docutils literal notranslate"><span class="pre">/jsonrpc</span></code>
+<strong>API Path:</strong> <code class="docutils literal notranslate"><span class="pre">/dvmdb/adom/{adom}/device</span></code> or <code class="docutils literal notranslate"><span class="pre">/dvmdb/device</span></code>
+<strong>ADOM Support:</strong> Yes (can query specific ADOM or all ADOMs)
+<strong>Requires Authentication:</strong> Yes
+<strong>Minimum Version:</strong> 7.0.0</p>
+<section id="endpoint-variants">
+<h3>Endpoint Variants<a class="headerlink" href="#endpoint-variants" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>URL Pattern</p></th>
+<th class="head"><p>Scope</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/dvmdb/adom/{adom}/device</span></code></p></td>
+<td><p>Single ADOM</p></td>
+<td><p>Get devices in a specific ADOM</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/dvmdb/device</span></code></p></td>
+<td><p>All ADOMs</p></td>
+<td><p>Get all devices across all ADOMs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Active session or valid API key</p></li>
+<li><p>Read permissions for device database</p></li>
+<li><p>ADOMs must be enabled (for ADOM-specific queries)</p></li>
+<li><p>Devices must be registered with FortiAnalyzer</p></li>
+</ul>
+</section>
+<section id="request-format">
+<h2>Request Format<a class="headerlink" href="#request-format" title="Link to this heading">#</a></h2>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>No*</p></td>
+<td><p>All ADOMs</p></td>
+<td><p>ADOM name (in URL path)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fields</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>No</p></td>
+<td><p>All fields</p></td>
+<td><p>List of specific fields to return</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">filter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>No</p></td>
+<td><p>None</p></td>
+<td><p>Filter conditions (see filtering section)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>*Required when using <code class="docutils literal notranslate"><span class="pre">/dvmdb/adom/{adom}/device</span></code> URL pattern</p>
+</section>
+<section id="common-device-fields">
+<h3>Common Device Fields<a class="headerlink" href="#common-device-fields" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Device name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">oid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Object ID (unique identifier)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sn</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Serial number</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Management IP address</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">platform_str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Platform type (e.g., “FortiGate-100F”, “Syslog-Device”)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Operating system type</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os_ver</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>OS version</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mr</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Major release version</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">build</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Build number</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">patch</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Patch level</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conn_status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Connection status (0=down, 1=up)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Device hostname</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adm_usr</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Associated ADOM name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">desc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mgmt_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Management mode</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ha_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>HA mode (0=standalone, 1=active-passive, 2=active-active)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vdom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>List of virtual domains</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+REQUEST</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/dvmdb/adom/root/device&quot;</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myfw01&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;oid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FGT60FTK20012345&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.200.254&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;platform_str&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FortiGate-100F&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;os_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;os_ver&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;mr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4967</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;patch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;conn_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myfw01&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;adm_usr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Main firewall&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;mgmt_mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ha_mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;maxvdom&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;vdom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;oid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;opmode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prod-web-srv01&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;oid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SYSLOG-001&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10.0.200.253&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;platform_str&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Syslog-Device&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;os_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;conn_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;adm_usr&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Web server syslog&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/dvmdb/adom/root/device&quot;</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="response-format">
+<h2>Response Format<a class="headerlink" href="#response-format" title="Link to this heading">#</a></h2>
+<section id="response-fields">
+<h3>Response Fields<a class="headerlink" href="#response-fields" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Device name (user-defined identifier)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">oid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Object ID - unique identifier in FortiAnalyzer</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sn</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Serial number</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ip</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Management IP address (0.0.0.0 for syslog devices)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">platform_str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Platform identifier (FortiGate-VM64, Syslog-Device, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>OS type: 0 (FortiOS), 7 (Syslog), etc.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os_ver</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Operating system major version</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mr</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Major release version</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">build</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Build number</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">patch</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Patch level (-1 if not applicable)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conn_status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Connection status: 0 (down), 1 (up)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">db_status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Database status</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conf_status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Configuration status</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Device hostname</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">adm_usr</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Associated ADOM name (empty for root)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">desc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Device description</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mgmt_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Management mode: 0 (unreg), 1 (fmg), 2 (faz), 3 (fmgfaz)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ha_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>HA mode: 0 (standalone), 1 (AP), 2 (AA)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ha_slave</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>List of HA slave devices</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">maxvdom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Maximum number of VDOMs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vdom</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></td>
+<td><p>Array of VDOM objects</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="vdom-object-structure">
+<h3>VDOM Object Structure<a class="headerlink" href="#vdom-object-structure" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>VDOM name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">oid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>VDOM Object ID</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">devid</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Parent device ID</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">opmode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Operation mode: 0 (transparent), 1 (NAT)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>VDOM status</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="complete-example">
+<h2>Complete Example<a class="headerlink" href="#complete-example" title="Link to this heading">#</a></h2>
+<section id="python-example">
+<h3>Python Example<a class="headerlink" href="#python-example" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib3</span>
+
+<span class="c1"># Disable SSL warnings for self-signed certificates</span>
+<span class="n">urllib3</span><span class="o">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">urllib3</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">InsecureRequestWarning</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_config</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load FortiAnalyzer configuration from .faz-env.json&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;.faz-env.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">login</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Establish session with FortiAnalyzer&quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_host&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_port&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;exec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/sys/login/user&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span>
+                <span class="s2">&quot;passwd&quot;</span><span class="p">:</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Login failed: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connection error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">logout</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">session_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Terminate session with FortiAnalyzer&quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_host&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_port&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;exec&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/sys/logout&quot;</span><span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">999</span>
+    <span class="p">}</span>
+
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_devices_in_adom</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get all devices in a specific ADOM</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+<span class="sd">        adom: ADOM name (default: &quot;root&quot;)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: List of device dictionaries</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_host&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_port&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;/dvmdb/adom/</span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">/device&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;API error: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_all_devices</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get all devices across all ADOMs</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        session_id: Active session ID</span>
+<span class="sd">        config: Configuration dictionary</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list: List of all device dictionaries</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_host&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;faz_port&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;get&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/dvmdb/device&quot;</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;API error: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">display_device_summary</span><span class="p">(</span><span class="n">devices</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display summary of devices&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">85</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Device Name&#39;</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;IP Address&#39;</span><span class="si">:</span><span class="s2">&lt;15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Platform&#39;</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Status&#39;</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;SN&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">85</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]</span>
+        <span class="n">ip</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ip&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+        <span class="n">platform</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform_str&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)[:</span><span class="mi">20</span><span class="p">]</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;Connected&#39;</span> <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;conn_status&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;Disconnected&#39;</span>
+        <span class="n">sn</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sn&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">ip</span><span class="si">:</span><span class="s2">&lt;15</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">platform</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">status</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">sn</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main execution&quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">()</span>
+    <span class="n">session_id</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Login</span>
+        <span class="n">session_id</span> <span class="o">=</span> <span class="n">login</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Logged in successfully&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Get devices in root ADOM</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Devices in &#39;root&#39; ADOM ===&quot;</span><span class="p">)</span>
+        <span class="n">devices</span> <span class="o">=</span> <span class="n">get_devices_in_adom</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">)</span><span class="si">}</span><span class="s2"> devices in root ADOM&quot;</span><span class="p">)</span>
+        <span class="n">display_device_summary</span><span class="p">(</span><span class="n">devices</span><span class="p">)</span>
+
+        <span class="c1"># Get all devices across all ADOMs</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== All Devices (All ADOMs) ===&quot;</span><span class="p">)</span>
+        <span class="n">all_devices</span> <span class="o">=</span> <span class="n">get_all_devices</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_devices</span><span class="p">)</span><span class="si">}</span><span class="s2"> total devices&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Group by ADOM</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+        <span class="n">by_adom</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">all_devices</span><span class="p">:</span>
+            <span class="n">adom</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;adm_usr&#39;</span><span class="p">,</span> <span class="s1">&#39;root&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;root&#39;</span>
+            <span class="n">by_adom</span><span class="p">[</span><span class="n">adom</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Devices by ADOM:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">adom</span><span class="p">,</span> <span class="n">device_list</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">by_adom</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">adom</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">device_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> device(s)&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Display detailed info for first FortiGate</span>
+        <span class="n">fortigates</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">devices</span> <span class="k">if</span> <span class="s1">&#39;FortiGate&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform_str&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">fortigates</span><span class="p">:</span>
+            <span class="n">fgt</span> <span class="o">=</span> <span class="n">fortigates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">85</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample FortiGate Details: </span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">85</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  IP Address: </span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ip&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Serial Number: </span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sn&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Platform: </span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform_str&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  OS Version: v</span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mr&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;os_ver&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;patch&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Build: </span><span class="si">{</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Connection Status: </span><span class="si">{</span><span class="s1">&#39;Connected&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;conn_status&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;Disconnected&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  HA Mode: </span><span class="si">{</span><span class="p">[</span><span class="s1">&#39;Standalone&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Active-Passive&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Active-Active&#39;</span><span class="p">][</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ha_mode&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  VDOMs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;vdom&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[]))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;vdom&#39;</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  VDOM List:&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">vdom</span> <span class="ow">in</span> <span class="n">fgt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;vdom&#39;</span><span class="p">,</span> <span class="p">[]):</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    - </span><span class="si">{</span><span class="n">vdom</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> (OID: </span><span class="si">{</span><span class="n">vdom</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;oid&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✗ Error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Always logout</span>
+        <span class="k">if</span> <span class="n">session_id</span><span class="p">:</span>
+            <span class="n">logout</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">session_id</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Logged out&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="curl-example">
+<h3>cURL Example<a class="headerlink" href="#curl-example" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Configuration</span>
+<span class="nv">FAZ_HOST</span><span class="o">=</span><span class="s2">&quot;faz.example.com&quot;</span>
+<span class="nv">FAZ_PORT</span><span class="o">=</span><span class="s2">&quot;443&quot;</span>
+<span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&quot;admin&quot;</span>
+<span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&quot;your_password_here&quot;</span>
+<span class="nv">ADOM</span><span class="o">=</span><span class="s2">&quot;root&quot;</span>
+
+<span class="c1"># Step 1: Login</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Logging in...&quot;</span>
+<span class="nv">LOGIN_RESPONSE</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;exec&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{</span>
+<span class="s1">      &quot;url&quot;: &quot;/sys/login/user&quot;,</span>
+<span class="s1">      &quot;data&quot;: {&quot;user&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s1">&#39;&quot;, &quot;passwd&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">PASSWORD</span><span class="si">}</span><span class="s1">&#39;&quot;}</span>
+<span class="s1">    }],</span>
+<span class="s1">    &quot;session&quot;: null,</span>
+<span class="s1">    &quot;id&quot;: 1</span>
+<span class="s1">  }&#39;</span><span class="k">)</span>
+
+<span class="nv">SESSION_ID</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$LOGIN_RESPONSE</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.session&#39;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Session ID: </span><span class="nv">$SESSION_ID</span><span class="s2">&quot;</span>
+<span class="nb">echo</span>
+
+<span class="c1"># Step 2: Get devices in specific ADOM</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Getting devices in ADOM: </span><span class="si">${</span><span class="nv">ADOM</span><span class="si">}</span><span class="s2">...&quot;</span>
+<span class="nv">DEVICES</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;get&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{</span>
+<span class="s1">      &quot;url&quot;: &quot;/dvmdb/adom/&#39;</span><span class="si">${</span><span class="nv">ADOM</span><span class="si">}</span><span class="s1">&#39;/device&quot;</span>
+<span class="s1">    }],</span>
+<span class="s1">    &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">    &quot;id&quot;: 2</span>
+<span class="s1">  }&#39;</span><span class="k">)</span>
+
+<span class="c1"># Display results</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Devices retrieved&quot;</span>
+<span class="nb">echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Device List:&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DEVICES</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.result[0].data[] | &quot;  - \(.name) (\(.ip)) - \(.platform_str) - Status: \(if .conn_status == 1 then &quot;Connected&quot; else &quot;Disconnected&quot; end)&quot;&#39;</span>
+
+<span class="c1"># Step 3: Get all devices (all ADOMs)</span>
+<span class="nb">echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Getting all devices across all ADOMs...&quot;</span>
+<span class="nv">ALL_DEVICES</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;get&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{</span>
+<span class="s1">      &quot;url&quot;: &quot;/dvmdb/device&quot;</span>
+<span class="s1">    }],</span>
+<span class="s1">    &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">    &quot;id&quot;: 3</span>
+<span class="s1">  }&#39;</span><span class="k">)</span>
+
+<span class="nv">TOTAL_COUNT</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ALL_DEVICES</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.result[0].data | length&#39;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Total devices across all ADOMs: </span><span class="nv">$TOTAL_COUNT</span><span class="s2">&quot;</span>
+
+<span class="c1"># Step 4: Logout</span>
+<span class="nb">echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Logging out...&quot;</span>
+curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">FAZ_HOST</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">FAZ_PORT</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;method&quot;: &quot;exec&quot;,</span>
+<span class="s1">    &quot;params&quot;: [{&quot;url&quot;: &quot;/sys/logout&quot;}],</span>
+<span class="s1">    &quot;session&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">SESSION_ID</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">    &quot;id&quot;: 999</span>
+<span class="s1">  }&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;✓ Logged out&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="filtering-devices">
+<h2>Filtering Devices<a class="headerlink" href="#filtering-devices" title="Link to this heading">#</a></h2>
+<section id="filter-by-connection-status">
+<h3>Filter by Connection Status<a class="headerlink" href="#filter-by-connection-status" title="Link to this heading">#</a></h3>
+<p>Get only connected devices:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/dvmdb/adom/root/device&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">[</span><span class="s2">&quot;conn_status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;==&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="filter-by-platform">
+<h3>Filter by Platform<a class="headerlink" href="#filter-by-platform" title="Link to this heading">#</a></h3>
+<p>Get only FortiGate devices:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/dvmdb/adom/root/device&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">[</span><span class="s2">&quot;platform_str&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;like&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;FortiGate&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="field-selection">
+<h3>Field Selection<a class="headerlink" href="#field-selection" title="Link to this heading">#</a></h3>
+<p>Get only specific fields to reduce response size:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/dvmdb/adom/root/device&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ip&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;platform_str&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;conn_status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;os_ver&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{session_id}}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>💡 Tip: Use Field Selection</strong>
+Always use the <code class="docutils literal notranslate"><span class="pre">fields</span></code> parameter to request only the data you need. This significantly reduces response size and improves performance.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip: Cache Device Lists</strong>
+Device lists change infrequently. Cache results for 5-15 minutes to reduce API calls.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip: Monitor Connection Status</strong>
+Regularly poll <code class="docutils literal notranslate"><span class="pre">conn_status</span></code> to detect offline devices and trigger alerts.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>⚠️ Warning: ADOM Access</strong>
+Ensure your API user has appropriate permissions to view devices in the target ADOM.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>💡 Tip: Use OID for References</strong>
+Use the device <code class="docutils literal notranslate"><span class="pre">oid</span></code> for database operations as it’s immutable, unlike device names which can change.</p>
+</div></blockquote>
+</section>
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
+<section id="use-case-1-build-device-selection-dropdown">
+<h3>Use Case 1: Build Device Selection Dropdown<a class="headerlink" href="#use-case-1-build-device-selection-dropdown" title="Link to this heading">#</a></h3>
+<p>Create a filtered list for UI dropdowns:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_device_choices</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get connected FortiGate devices for selection&quot;&quot;&quot;</span>
+    <span class="n">devices</span> <span class="o">=</span> <span class="n">get_devices_in_adom</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">adom</span><span class="p">)</span>
+
+    <span class="c1"># Filter to only connected FortiGates</span>
+    <span class="n">fortigates</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="s1">&#39;ip&#39;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">],</span> <span class="s1">&#39;oid&#39;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;oid&#39;</span><span class="p">]}</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">devices</span>
+        <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;conn_status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="s1">&#39;FortiGate&#39;</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform_str&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fortigates</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="use-case-2-device-health-monitoring">
+<h3>Use Case 2: Device Health Monitoring<a class="headerlink" href="#use-case-2-device-health-monitoring" title="Link to this heading">#</a></h3>
+<p>Monitor device connectivity and versions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_device_health</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate device health report&quot;&quot;&quot;</span>
+    <span class="n">devices</span> <span class="o">=</span> <span class="n">get_all_devices</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+    <span class="n">health_report</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;total&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">),</span>
+        <span class="s1">&#39;connected&#39;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">devices</span> <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;conn_status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s1">&#39;disconnected&#39;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">devices</span> <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;conn_status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="s1">&#39;outdated&#39;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Find devices with old OS versions</span>
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;os_ver&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>  <span class="c1"># Older than v7.x</span>
+            <span class="n">health_report</span><span class="p">[</span><span class="s1">&#39;outdated&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">device</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;v</span><span class="si">{</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mr&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;os_ver&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s1">&#39;platform&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform_str&#39;</span><span class="p">)</span>
+            <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">health_report</span>
+</pre></div>
+</div>
+</section>
+<section id="use-case-3-device-inventory-export">
+<h3>Use Case 3: Device Inventory Export<a class="headerlink" href="#use-case-3-device-inventory-export" title="Link to this heading">#</a></h3>
+<p>Generate comprehensive device inventory:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_device_inventory</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate device inventory for reporting&quot;&quot;&quot;</span>
+    <span class="n">devices</span> <span class="o">=</span> <span class="n">get_all_devices</span><span class="p">(</span><span class="n">session_id</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+
+    <span class="n">inventory</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+        <span class="n">inventory</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;IP Address&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ip&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;Serial Number&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sn&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;Platform&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform_str&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;OS Version&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;v</span><span class="si">{</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mr&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;os_ver&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;patch&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;Build&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;Status&#39;</span><span class="p">:</span> <span class="s1">&#39;Connected&#39;</span> <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;conn_status&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;Disconnected&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ADOM&#39;</span><span class="p">:</span> <span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;adm_usr&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;HA Mode&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Standalone&#39;</span><span class="p">,</span> <span class="s1">&#39;Active-Passive&#39;</span><span class="p">,</span> <span class="s1">&#39;Active-Active&#39;</span><span class="p">][</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ha_mode&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span>
+            <span class="s1">&#39;VDOMs&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">device</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;vdom&#39;</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">inventory</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="error-handling">
+<h2>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h2>
+<section id="common-errors">
+<h3>Common Errors<a class="headerlink" href="#common-errors" title="Link to this heading">#</a></h3>
+<section id="error-code-10-session-timeout">
+<h4>Error Code -10: Session Timeout<a class="headerlink" href="#error-code-10-session-timeout" title="Link to this heading">#</a></h4>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-10</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Session timeout&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Cause:</strong> Session has expired or is invalid</p>
+<p><strong>Solution:</strong></p>
+<ul class="simple">
+<li><p>Re-authenticate and obtain a new session ID</p></li>
+<li><p>Use API key authentication for stateless operations</p></li>
+</ul>
+</section>
+<section id="error-code-3-invalid-adom">
+<h4>Error Code -3: Invalid ADOM<a class="headerlink" href="#error-code-3-invalid-adom" title="Link to this heading">#</a></h4>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Object does not exist&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Cause:</strong> Specified ADOM does not exist</p>
+<p><strong>Solution:</strong></p>
+<ul class="simple">
+<li><p>Verify ADOM name is correct</p></li>
+<li><p>Use <a class="reference internal" href="get-adom-with-no-fields.html"><span class="std std-doc">Get ADOMs</span></a> to list available ADOMs</p></li>
+<li><p>Check user has permission to access the ADOM</p></li>
+</ul>
+</section>
+<section id="error-empty-device-list">
+<h4>Error: Empty Device List<a class="headerlink" href="#error-empty-device-list" title="Link to this heading">#</a></h4>
+<p><strong>Symptom:</strong> Response returns empty array</p>
+<p><strong>Solution:</strong></p>
+<ul class="simple">
+<li><p>Verify devices are registered in the specified ADOM</p></li>
+<li><p>Check ADOM is enabled</p></li>
+<li><p>Ensure API user has device read permissions</p></li>
+<li><p>Confirm devices are sending logs to FortiAnalyzer</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="related-endpoints">
+<h2>Related Endpoints<a class="headerlink" href="#related-endpoints" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="get-adom-with-no-fields.html"><span class="std std-doc">Get ADOMs</span></a> - List available ADOMs</p></li>
+<li><p><a class="reference internal" href="get-unregistered-devices.html"><span class="std std-doc">Get Unregistered Devices</span></a> - View devices pending registration</p></li>
+<li><p><a class="reference internal" href="add-model-device-with-psk.html"><span class="std std-doc">Add Model Device</span></a> - Register a new device</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<section id="issue-missing-devices-in-response">
+<h3>Issue: Missing Devices in Response<a class="headerlink" href="#issue-missing-devices-in-response" title="Link to this heading">#</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul class="simple">
+<li><p>Known devices don’t appear in API response</p></li>
+<li><p>Device count doesn’t match GUI</p></li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol class="arabic simple">
+<li><p>Verify querying correct ADOM</p></li>
+<li><p>Check device authorization status</p></li>
+<li><p>Ensure user permissions include target ADOM</p></li>
+<li><p>Try <code class="docutils literal notranslate"><span class="pre">/dvmdb/device</span></code> to see all devices</p></li>
+<li><p>Verify no filters are accidentally applied</p></li>
+</ol>
+</section>
+<section id="issue-conn-status-always-shows-0">
+<h3>Issue: conn_status Always Shows 0<a class="headerlink" href="#issue-conn-status-always-shows-0" title="Link to this heading">#</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul class="simple">
+<li><p>All devices show disconnected</p></li>
+<li><p>No connected devices reported</p></li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol class="arabic simple">
+<li><p>Check FortiAnalyzer system time</p></li>
+<li><p>Verify devices are actually sending logs</p></li>
+<li><p>Review device authorization settings</p></li>
+<li><p>Check FortiAnalyzer network connectivity</p></li>
+<li><p>Review device-side log forwarding configuration</p></li>
+</ol>
+</section>
+<section id="issue-performance-issues-with-large-device-lists">
+<h3>Issue: Performance Issues with Large Device Lists<a class="headerlink" href="#issue-performance-issues-with-large-device-lists" title="Link to this heading">#</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul class="simple">
+<li><p>Slow API response times</p></li>
+<li><p>Timeouts with many devices</p></li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol class="arabic simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">fields</span></code> parameter to limit returned data</p></li>
+<li><p>Implement pagination if API supports it</p></li>
+<li><p>Cache results appropriately</p></li>
+<li><p>Query specific ADOMs instead of all devices</p></li>
+<li><p>Use filtering to reduce result set</p></li>
+</ol>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>✅ Verification:</strong> All code examples tested against FortiAnalyzer v8.0.0 and verified to work correctly.</p>
+</div></blockquote>
+<p><strong>Last Updated:</strong> 2025-11-09
+<strong>API Version:</strong> 7.6.4+ (tested on v8.0.0)</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-variants">Endpoint Variants</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-format">Request Format</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-device-fields">Common Device Fields</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-format">Response Format</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vdom-object-structure">VDOM Object Structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-example">Complete Example</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example">Python Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curl-example">cURL Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-devices">Filtering Devices</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-by-connection-status">Filter by Connection Status</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-by-platform">Filter by Platform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-selection">Field Selection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-1-build-device-selection-dropdown">Use Case 1: Build Device Selection Dropdown</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-2-device-health-monitoring">Use Case 2: Device Health Monitoring</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-3-device-inventory-export">Use Case 3: Device Inventory Export</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-code-10-session-timeout">Error Code -10: Session Timeout</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-code-3-invalid-adom">Error Code -3: Invalid ADOM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-empty-device-list">Error: Empty Device List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-endpoints">Related Endpoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-missing-devices-in-response">Issue: Missing Devices in Response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-conn-status-always-shows-0">Issue: conn_status Always Shows 0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-performance-issues-with-large-device-lists">Issue: Performance Issues with Large Device Lists</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roland Stierli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Fortinet.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Nov 18, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

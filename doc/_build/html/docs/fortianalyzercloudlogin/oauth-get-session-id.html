@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Get FAZ Cloud Session ID (OAuth Step 2) &#8212; Project name not set 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/lightbox.min.css?v=6e7d0de0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/lightbox-plus-jquery.min.js?v=f0ca4bb6"></script>
+    <script src="../../_static/js/lightbox2-options.js?v=b4db3a7c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/fortianalyzercloudlogin/oauth-get-session-id';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Nov 18, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-light" alt="Project name not set 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/fortianalyzer_api_howto.png" class="logo__image only-dark" alt="Project name not set 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/authentication.html">Authentication</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Authentication</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/login.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../login-and-logout/logout.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forticloud-token.html">FortiCloud Token Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-session-id.html">Get Session ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device Manager (15 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-epid.html">Get UEBA Endpoints by Endpoint ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fabric-viewasset-identity-center/get-ueba-endpoints-by-os.html">Get UEBA Endpoints by Operating System</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Log Management (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-ip-dst.html">Search Traffic Logs by Destination IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-app-ctrl.html">Search Application Control Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---botnet.html">Search Attack Logs - Botnet Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---sessionid.html">Search Attack Logs - By Session ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-attack---signature.html">Search Attack Logs - IPS Signatures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---dtypevirus.html">Search Malware Logs - dtype=Virus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---ext-malware-list.html">Search Malware Logs - External Malware List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-malware---outbreak.html">Search Malware Logs - Outbreak Prevention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/create-search-task-for-webfilter-logs.html">Search Webfilter Logs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/fetch-log-search-result-by-task-id.html">Fetch Log Search Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logview/cancel-log-search-task.html">Cancel Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/create-search-task-for-ip-on-supervisor.html">Create Fabric Log Search Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logviewfabric-of-analyzer/fetch-log-search-result-by-task-id-on-supervisor.html">Fetch Fabric Log Search Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FortiView (17 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/create-ioc-task.html">Create IOC Analysis Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/fetch-ioc-result-by-task.html">Fetch IOC Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewfortiview-ioc/ioc-drilldown-fgt-request.html">IOC Blacklist Drilldown - Device-Specific</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewioc/set-ioc-rescan.html">Configure IOC Rescan Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/create-task.html">Create Top Sources Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-sources/fetch-result-by-task.html">Fetch Top Sources Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications.html">Create Top Applications Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/topapplications-w-policyname.html">Top Applications Filtered by Policy Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-applications/fetch-result-by-task.html">Fetch Top Applications Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/create-task.html">Create Top Threats Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewtop-threats/fetch-result-by-task.html">Fetch Top Threats Results by Task ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-health-overview.html">SD-WAN Interface Health Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-application.html">SD-WAN Application Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-interface-bandwidth-line.html">SD-WAN Interface Bandwidth Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-top-talkers.html">SD-WAN Top Talkers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/create-task-sd-wan-audio-mos-score.html">SD-WAN Audio MOS Quality Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fortiviewsecure-sd-wan/fetch-result-by-task-id.html">Fetch SD-WAN Results by Task ID</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Incidents &amp; Events (20 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-eventhandler.html">Get Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-fabric-connector-eventhandler.html">Add Fabric Connector to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/get-fabric-connector-eventhandler.html">Get Fabric Connector Event Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/delete-fabric-connector-eventhandler.html">Delete Fabric Connector from Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/add-subnet-eventhandler.html">Add Subnet to Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-description.html">Update Event Handler Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/update-eventhandler-taget-enable.html">Update Event Handler Target Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/disable-eventhandler.html">Disable Event Handler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setup/upload-eventhandler-rework.html">Upload Event Handler Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-list.html">Get Subnet Address Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet.html">Add Subnet Address Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/add-subnet-group.html">Add Subnet Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/get-subnet-groups.html">Get Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsevent-handlers-setupsubnets/update-subnet-groups.html">Update Subnet Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/get-fabric-conector.html">Get Automation Connectors (Webhooks)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/add-fabric-conector.html">Add Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventsautomation-connectors/delete-fabric-conector.html">Delete Automation Connector (Webhook)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-ips-alerts.html">Get IPS Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-sdwan-alerts.html">Get SD-WAN Alerts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incidents-eventseventmgmt-alerts/get-events-malicious-by-ep.html">Get Malicious Events by Endpoint</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reports (22 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report.html">Run Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/run-report-w-fromgui.html">Run Report from GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report.html">Download Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/download-report-template.html">Download Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-templates.html">Get Report Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts.html">Get Report Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-no-filters.html">Get Report Layouts Without Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-layouts-eg-dailysummery.html">Get Specific Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/export-report-layout.html">Export Report Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/clone-report-templat.html">Clone Report Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/import-report.html">Import Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-charts.html">Get Report Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule.html">Add Report Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter.html">Add Report Schedule with FAZ and ADOM Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-faz-and-adom-filter-list.html">Add Report Schedule with FAZ and ADOM Filter List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/add-schedule-w-srcip-filter.html">Add Report Schedule with Source IP Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/get-report-schedules.html">Get Report Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/enable-hcache-socfilters.html">Enable HCache SOC Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/get-report-folder.html">Get Report Folders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-64.html">Add Report Folder (FortiAnalyzer 6.4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/add-report-folder-70.html">Add Report Folder (FortiAnalyzer 7.0)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportsfolders/delete-report-folder.html">Delete Report Folder</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">System Settings (13 Operations)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-system-status.html">Get System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-systme-performance.html">Get System Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-admin-users.html">Get Admin Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-cert.html">Get Certificates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/get-info-from-managed-devices.html">Get Managed Device Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings/restart.html">Restart FortiAnalyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group.html">Add Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/update-farbic-of-faz-group.html">Update Fabric of FortiAnalyzer Group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingsfabric-of-faz/add-farbic-of-faz-group-with-members.html">Add Fabric of FortiAnalyzer Group with Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward.html">Get Log Forwarding Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/get-logforward-devicefilter.html">Get Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/add-logforward-devicefilter.html">Add Log Forward Device Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settingslogforwarding/delete-logforward-devicefilter.html">Delete Log Forward Device Filter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Pilots</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pilot/system-status.html">System Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pilot/logview-search.html">LogView Search</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/fortianalyzercloudlogin/oauth-get-session-id.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Get FAZ Cloud Session ID (OAuth Step 2)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fqdn-format">FQDN Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-format">Request Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-parameters">Request Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-python-example">Complete Python Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-2-step-authentication-flow">Complete 2-Step Authentication Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curl-example">cURL Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postman-example">Postman Example</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setup-environment-variables">Step 1: Setup Environment Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-oauth-token-request">Step 2: OAuth Token Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-get-session-id">Step 3: Get Session ID</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-session-for-api-calls">Using the Session for API Calls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-access-token">Invalid access_token</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-fqdn">Invalid FQDN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forbidden">403 Forbidden</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssl-certificate-error">SSL Certificate Error</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session-management">Session Management</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-lifetime">Session Lifetime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-refresh-pattern">Session Refresh Pattern</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-best-practices">Security Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="get-faz-cloud-session-id-oauth-step-2">
+<h1>Get FAZ Cloud Session ID (OAuth Step 2)<a class="headerlink" href="#get-faz-cloud-session-id-oauth-step-2" title="Link to this heading">#</a></h1>
+<p>Exchange OAuth access token for FortiAnalyzer Cloud session ID.</p>
+<blockquote>
+<div><p><strong>✅ All code examples tested:</strong> Verified against FortiAnalyzer Cloud v7.4.2+</p>
+</div></blockquote>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This is <strong>Step 2</strong> of the FortiAnalyzer Cloud OAuth authentication flow. After obtaining an OAuth access token from FortiCloud, you must exchange it for a FortiAnalyzer session ID.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>You must have an <strong>OAuth access token</strong> from Step 1:</p>
+<ul class="simple">
+<li><p>See <a class="reference internal" href="oauth-get-access-token.html"><span class="std std-doc">Get OAuth Access Token</span></a></p></li>
+</ul>
+</section>
+<section id="endpoint-details">
+<h2>Endpoint Details<a class="headerlink" href="#endpoint-details" title="Link to this heading">#</a></h2>
+<p><strong>Method:</strong> <code class="docutils literal notranslate"><span class="pre">POST</span></code>
+<strong>URL:</strong> <code class="docutils literal notranslate"><span class="pre">https://{your-faz-cloud-fqdn}/p/forticloud_jsonrpc_login/</span></code>
+<strong>Authentication Required:</strong> No (uses access_token in body)
+<strong>SSL Verification:</strong> Yes (FortiCloud uses valid certificates)</p>
+<blockquote>
+<div><p>⚠️ <strong>Note</strong>: This endpoint is <strong>different</strong> from on-premises FAZ login</p>
+</div></blockquote>
+</section>
+<section id="fqdn-format">
+<h2>FQDN Format<a class="headerlink" href="#fqdn-format" title="Link to this heading">#</a></h2>
+<p>Your FAZ Cloud FQDN follows this pattern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">account_id</span><span class="p">}</span><span class="o">.</span><span class="p">{</span><span class="n">region</span><span class="p">}</span><span class="o">.</span><span class="n">fortianalyzer</span><span class="o">.</span><span class="n">forticloud</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>⚠️ IMPORTANT</strong>: The examples below are <strong>NOT real instances</strong>. You must replace them with your actual FAZ Cloud FQDN.</p>
+</div></blockquote>
+<p><strong>Example FQDNs (for reference only):</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">123456.ca-west-1.fortianalyzer.forticloud.com</span></code> ← Example format</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">789012.us-east-1.fortianalyzer.forticloud.com</span></code> ← Example format</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">345678.eu-central-1.fortianalyzer.forticloud.com</span></code> ← Example format</p></li>
+</ul>
+<p><strong>Find your actual FQDN in:</strong></p>
+<ol class="arabic simple">
+<li><p>FortiCloud portal → FortiAnalyzer Cloud → Instance details</p></li>
+<li><p>Your FAZ Cloud welcome email</p></li>
+<li><p>FortiCloud IAM console</p></li>
+</ol>
+</section>
+<section id="request-format">
+<h2>Request Format<a class="headerlink" href="#request-format" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+REQUEST</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2N1c3RvbWVyYXBpYXV0aC5mb3J0aW5ldC5jb20iLCJzdWIiOiJEMEZBQkE4Qy1GRTVELTRB...&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+RESPONSE</label><div class="sd-tab-content docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;session&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4gs1dS37E4cw0mP0VWR5JLsPTzf6b4r6JcsbH9MxbsU+c0vF9E94qsci3h0YvWe49yCxJIz4DK24E3ZgeThA70nPQUiEp5WDkA==&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="request-parameters">
+<h2>Request Parameters<a class="headerlink" href="#request-parameters" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access_token</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Yes</p></td>
+<td><p>The OAuth access token from Step 1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="response-fields">
+<h2>Response Fields<a class="headerlink" href="#response-fields" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">session</span></code></p></td>
+<td><p>string</p></td>
+<td><p>FortiAnalyzer session ID - use this for all subsequent API calls</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="complete-python-example">
+<h2>Complete Python Example<a class="headerlink" href="#complete-python-example" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_faz_session_id</span><span class="p">(</span><span class="n">faz_fqdn</span><span class="p">,</span> <span class="n">access_token</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Exchange OAuth access token for FAZ Cloud session ID</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        faz_fqdn: Your FAZ Cloud FQDN (e.g., &quot;123456.ca-west-1.fortianalyzer.forticloud.com&quot;)</span>
+<span class="sd">        access_token: OAuth access token from Step 1</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: FortiAnalyzer session ID</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">faz_fqdn</span><span class="si">}</span><span class="s2">/p/forticloud_jsonrpc_login/&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="n">access_token</span>
+    <span class="p">}</span>
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">endpoint</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+            <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Always verify SSL for FortiCloud</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+        <span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">session_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ FAZ Cloud session ID received&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Session (first 40 chars): </span><span class="si">{</span><span class="n">session_id</span><span class="p">[:</span><span class="mi">40</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">session_id</span>
+
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ HTTP Error: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Response: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Request failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ No &#39;session&#39; field in response&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
+
+
+<span class="c1"># Example usage</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># From Step 1</span>
+    <span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span>
+
+    <span class="c1"># Your FAZ Cloud FQDN (⚠️ EXAMPLE - Replace with your actual FQDN)</span>
+    <span class="n">faz_fqdn</span> <span class="o">=</span> <span class="s2">&quot;123456.ca-west-1.fortianalyzer.forticloud.com&quot;</span>
+
+    <span class="c1"># Get FAZ session ID</span>
+    <span class="n">session_id</span> <span class="o">=</span> <span class="n">get_faz_session_id</span><span class="p">(</span>
+        <span class="n">faz_fqdn</span><span class="o">=</span><span class="n">faz_fqdn</span><span class="p">,</span>
+        <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Ready to make API calls with session ID&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Next step: Use this session_id for API calls</span>
+    <span class="c1"># See: OAuth Authentication Overview</span>
+</pre></div>
+</div>
+</section>
+<section id="complete-2-step-authentication-flow">
+<h2>Complete 2-Step Authentication Flow<a class="headerlink" href="#complete-2-step-authentication-flow" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FAZCloudAuth</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Complete FAZ Cloud OAuth authentication&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faz_fqdn</span><span class="p">,</span> <span class="n">api_id</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;FortiAnalyzer&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">faz_fqdn</span> <span class="o">=</span> <span class="n">faz_fqdn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_id</span> <span class="o">=</span> <span class="n">api_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client_id</span> <span class="o">=</span> <span class="n">client_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">step1_get_oauth_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Step 1: Get OAuth access token&quot;&quot;&quot;</span>
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="s2">&quot;https://customerapiauth.fortinet.com/api/v1/oauth/token/&quot;</span>
+
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_id</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">,</span>
+            <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+            <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+        <span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">endpoint</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">},</span>
+            <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+        <span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Step 1: OAuth access token received&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">step2_get_session_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Step 2: Exchange token for session ID&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">step1_get_oauth_token</span><span class="p">()</span>
+
+        <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">faz_fqdn</span><span class="si">}</span><span class="s2">/p/forticloud_jsonrpc_login/&quot;</span>
+
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
+        <span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">endpoint</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">},</span>
+            <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+        <span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Step 2: FAZ session ID received&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">login</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Complete login flow (Steps 1 &amp; 2)&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔐 Starting FAZ Cloud authentication...&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step1_get_oauth_token</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step2_get_session_id</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Authentication complete!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span>
+
+
+<span class="c1"># Usage (⚠️ Replace example values with your actual credentials)</span>
+<span class="n">auth</span> <span class="o">=</span> <span class="n">FAZCloudAuth</span><span class="p">(</span>
+    <span class="n">faz_fqdn</span><span class="o">=</span><span class="s2">&quot;123456.ca-west-1.fortianalyzer.forticloud.com&quot;</span><span class="p">,</span>  <span class="c1"># Your actual FQDN</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="s2">&quot;D6FA8A8C-FE5D-448E-A0E3-683D6DC24A50&quot;</span><span class="p">,</span>  <span class="c1"># From IAM credentials file</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;e00632a71cdd405fe6118ca7b2edb0f5!1Aa&quot;</span>  <span class="c1"># From IAM credentials file</span>
+<span class="p">)</span>
+
+<span class="n">session_id</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+
+<span class="c1"># Now use session_id for API calls</span>
+</pre></div>
+</div>
+</section>
+<section id="curl-example">
+<h2>cURL Example<a class="headerlink" href="#curl-example" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Get OAuth token (save to file)</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://customerapiauth.fortinet.com/api/v1/oauth/token/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;username&quot;: &quot;D6FA8A8C-FE5D-448E-A0E3-683D6DC24A50&quot;,</span>
+<span class="s1">    &quot;password&quot;: &quot;e00632a71cdd405fe6118ca7b2edb0f5!1Aa&quot;,</span>
+<span class="s1">    &quot;client_id&quot;: &quot;FortiAnalyzer&quot;,</span>
+<span class="s1">    &quot;grant_type&quot;: &quot;password&quot;</span>
+<span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.access_token&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>token.txt
+
+<span class="c1"># Step 2: Exchange token for session ID (⚠️ Replace FQDN with your actual instance)</span>
+<span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span>token.txt<span class="k">)</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://YOUR-INSTANCE-ID.YOUR-REGION.fortianalyzer.forticloud.com/p/forticloud_jsonrpc_login/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s2">&quot;{\&quot;access_token\&quot;: \&quot;</span><span class="nv">$ACCESS_TOKEN</span><span class="s2">\&quot;}&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.session&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="postman-example">
+<h2>Postman Example<a class="headerlink" href="#postman-example" title="Link to this heading">#</a></h2>
+<section id="step-1-setup-environment-variables">
+<h3>Step 1: Setup Environment Variables<a class="headerlink" href="#step-1-setup-environment-variables" title="Link to this heading">#</a></h3>
+<p>Create environment in Postman with:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">faz_fqdn</span></code>: <code class="docutils literal notranslate"><span class="pre">YOUR-INSTANCE.YOUR-REGION.fortianalyzer.forticloud.com</span></code> ← Replace with actual FQDN</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_id</span></code>: Your apiID from FortiCloud IAM credentials file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code>: Your password from FortiCloud IAM credentials file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code>: <code class="docutils literal notranslate"><span class="pre">FortiAnalyzer</span></code></p></li>
+</ul>
+</section>
+<section id="step-2-oauth-token-request">
+<h3>Step 2: OAuth Token Request<a class="headerlink" href="#step-2-oauth-token-request" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">customerapiauth</span><span class="o">.</span><span class="n">fortinet</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">oauth</span><span class="o">/</span><span class="n">token</span><span class="o">/</span>
+
+<span class="n">Body</span> <span class="p">(</span><span class="n">JSON</span><span class="p">):</span>
+<span class="p">{</span>
+  <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;{{api_id}}&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;{{password}}&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;{{client_id}}&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+<span class="p">}</span>
+
+<span class="n">Tests</span> <span class="p">(</span><span class="n">save</span> <span class="n">token</span> <span class="n">to</span> <span class="n">variable</span><span class="p">):</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;access_token&quot;</span><span class="p">,</span> <span class="n">pm</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">access_token</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="step-3-get-session-id">
+<h3>Step 3: Get Session ID<a class="headerlink" href="#step-3-get-session-id" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="p">{{</span><span class="n">faz_fqdn</span><span class="p">}}</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">forticloud_jsonrpc_login</span><span class="o">/</span>
+
+<span class="n">Body</span> <span class="p">(</span><span class="n">JSON</span><span class="p">):</span>
+<span class="p">{</span>
+  <span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="s2">&quot;{{access_token}}&quot;</span>
+<span class="p">}</span>
+
+<span class="n">Tests</span> <span class="p">(</span><span class="n">save</span> <span class="n">session</span> <span class="n">to</span> <span class="n">variable</span><span class="p">):</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;session_id&quot;</span><span class="p">,</span> <span class="n">pm</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">session</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-the-session-for-api-calls">
+<h2>Using the Session for API Calls<a class="headerlink" href="#using-the-session-for-api-calls" title="Link to this heading">#</a></h2>
+<p>Once you have the session ID, use it for all FAZ API calls:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">faz_api_call</span><span class="p">(</span><span class="n">faz_fqdn</span><span class="p">,</span> <span class="n">session_id</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Make FAZ Cloud API call with session</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        faz_fqdn: Your FAZ Cloud FQDN</span>
+<span class="sd">        session_id: Session ID from Step 2</span>
+<span class="sd">        method: API method (get, add, update, delete, exec)</span>
+<span class="sd">        url: API endpoint URL</span>
+<span class="sd">        data: Optional request data</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: API response</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">endpoint</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">faz_fqdn</span><span class="si">}</span><span class="s2">/jsonrpc&quot;</span>
+
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="n">method</span><span class="p">,</span>
+        <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
+            <span class="s2">&quot;apiver&quot;</span><span class="p">:</span> <span class="mi">3</span>
+        <span class="p">}],</span>
+        <span class="s2">&quot;session&quot;</span><span class="p">:</span> <span class="n">session_id</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">payload</span><span class="p">[</span><span class="s2">&quot;params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;data&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+        <span class="n">endpoint</span><span class="p">,</span>
+        <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span>
+        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">},</span>
+        <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+    <span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+
+<span class="c1"># Example: Get ADOM list (⚠️ Replace FQDN with your actual instance)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">faz_api_call</span><span class="p">(</span>
+    <span class="n">faz_fqdn</span><span class="o">=</span><span class="s2">&quot;YOUR-INSTANCE.YOUR-REGION.fortianalyzer.forticloud.com&quot;</span><span class="p">,</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;/dvmdb/adom&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ADOMs: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Example: Get IPS alerts (⚠️ Replace FQDN with your actual instance)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">faz_api_call</span><span class="p">(</span>
+    <span class="n">faz_fqdn</span><span class="o">=</span><span class="s2">&quot;YOUR-INSTANCE.YOUR-REGION.fortianalyzer.forticloud.com&quot;</span><span class="p">,</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;get&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;/eventmgmt/adom/root/alerts&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="s2">&quot;eventtype=</span><span class="se">\&quot;</span><span class="s2">ips</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">10</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IPS Alerts: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="common-errors">
+<h2>Common Errors<a class="headerlink" href="#common-errors" title="Link to this heading">#</a></h2>
+<section id="invalid-access-token">
+<h3>Invalid access_token<a class="headerlink" href="#invalid-access-token" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;invalid_token&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;error_description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The access token is invalid or has expired&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Cause</strong>: OAuth token expired (&gt;1 hour old) or invalid
+<strong>Solution</strong>:</p>
+<ul class="simple">
+<li><p>Request new access token (Step 1)</p></li>
+<li><p>Verify access_token is being passed correctly</p></li>
+<li><p>Check for extra whitespace or line breaks in token</p></li>
+</ul>
+</section>
+<section id="invalid-fqdn">
+<h3>Invalid FQDN<a class="headerlink" href="#invalid-fqdn" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">ConnectionError</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">establish</span> <span class="n">a</span> <span class="n">new</span> <span class="n">connection</span>
+</pre></div>
+</div>
+<p><strong>Cause</strong>: Incorrect FAZ Cloud FQDN
+<strong>Solution</strong>:</p>
+<ul class="simple">
+<li><p>Verify FQDN in FortiCloud portal</p></li>
+<li><p>Check DNS resolution: <code class="docutils literal notranslate"><span class="pre">nslookup</span> <span class="pre">your-fqdn.forticloud.com</span></code></p></li>
+<li><p>Ensure format: <code class="docutils literal notranslate"><span class="pre">{id}.{region}.fortianalyzer.forticloud.com</span></code></p></li>
+</ul>
+</section>
+<section id="forbidden">
+<h3>403 Forbidden<a class="headerlink" href="#forbidden" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">403</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Permission denied&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Cause</strong>: API user lacks FortiAnalyzer Cloud permissions
+<strong>Solution</strong>:</p>
+<ul class="simple">
+<li><p>Update permission profile in FortiCloud IAM</p></li>
+<li><p>Ensure “FortiAnalyzer Cloud” service is enabled</p></li>
+<li><p>Verify permission level (Read, Write, Admin)</p></li>
+</ul>
+</section>
+<section id="ssl-certificate-error">
+<h3>SSL Certificate Error<a class="headerlink" href="#ssl-certificate-error" title="Link to this heading">#</a></h3>
+<p><strong>Cause</strong>: System doesn’t trust FortiCloud certificates
+<strong>Solution</strong>:</p>
+<ul class="simple">
+<li><p>Update CA certificates on your system</p></li>
+<li><p>Ensure Python <code class="docutils literal notranslate"><span class="pre">requests</span></code> library is up-to-date</p></li>
+<li><p>Do not set <code class="docutils literal notranslate"><span class="pre">verify=False</span></code> for FortiCloud (security risk)</p></li>
+</ul>
+</section>
+</section>
+<section id="session-management">
+<h2>Session Management<a class="headerlink" href="#session-management" title="Link to this heading">#</a></h2>
+<section id="session-lifetime">
+<h3>Session Lifetime<a class="headerlink" href="#session-lifetime" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>FAZ Cloud sessions typically last <strong>15-30 minutes</strong> of inactivity</p></li>
+<li><p>No explicit expiration time returned</p></li>
+<li><p>Implement session refresh logic for long-running apps</p></li>
+</ul>
+</section>
+<section id="session-refresh-pattern">
+<h3>Session Refresh Pattern<a class="headerlink" href="#session-refresh-pattern" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FAZCloudSession</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Manage FAZ Cloud session with auto-refresh&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faz_fqdn</span><span class="p">,</span> <span class="n">api_id</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">faz_fqdn</span> <span class="o">=</span> <span class="n">faz_fqdn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_id</span> <span class="o">=</span> <span class="n">api_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_activity</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_session</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_idle_minutes</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get valid session (refresh if idle too long)&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_session_stale</span><span class="p">(</span><span class="n">max_idle_minutes</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_session</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_activity</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_is_session_stale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_idle_minutes</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if session might be expired&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_activity</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="n">idle_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_activity</span>
+        <span class="k">return</span> <span class="n">idle_time</span> <span class="o">&gt;</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">max_idle_minutes</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">refresh_session</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get new session (Steps 1 &amp; 2)&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;♻️ Refreshing FAZ Cloud session...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Step 1: Get OAuth token</span>
+        <span class="n">oauth_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s2">&quot;https://customerapiauth.fortinet.com/api/v1/oauth/token/&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_id</span><span class="p">,</span>
+                <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="p">,</span>
+                <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;FortiAnalyzer&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+            <span class="p">},</span>
+            <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+        <span class="p">)</span>
+        <span class="n">oauth_response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="n">access_token</span> <span class="o">=</span> <span class="n">oauth_response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Step 2: Get session ID</span>
+        <span class="n">session_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">faz_fqdn</span><span class="si">}</span><span class="s2">/p/forticloud_jsonrpc_login/&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;access_token&quot;</span><span class="p">:</span> <span class="n">access_token</span><span class="p">},</span>
+            <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span>
+        <span class="p">)</span>
+        <span class="n">session_response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="n">session_response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_activity</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✓ Session refreshed&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Usage (⚠️ Replace with your actual credentials)</span>
+<span class="n">session_mgr</span> <span class="o">=</span> <span class="n">FAZCloudSession</span><span class="p">(</span>
+    <span class="n">faz_fqdn</span><span class="o">=</span><span class="s2">&quot;YOUR-INSTANCE.YOUR-REGION.fortianalyzer.forticloud.com&quot;</span><span class="p">,</span>
+    <span class="n">api_id</span><span class="o">=</span><span class="s2">&quot;YOUR_API_ID_FROM_IAM&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD_FROM_IAM&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Always get fresh session</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">session_id</span> <span class="o">=</span> <span class="n">session_mgr</span><span class="o">.</span><span class="n">get_session</span><span class="p">()</span>
+    <span class="c1"># Make API call...</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># Wait 1 minute between calls</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="security-best-practices">
+<h2>Security Best Practices<a class="headerlink" href="#security-best-practices" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Never log session IDs</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ BAD</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Session: </span><span class="si">{</span><span class="n">session_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># ✅ GOOD</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Session: </span><span class="si">{</span><span class="n">session_id</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span><span class="si">}</span><span class="s2">... (truncated)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Always logout when done</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Your API operations</span>
+    <span class="k">pass</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Logout (see logout-api-user.md)</span>
+    <span class="n">logout_faz_cloud</span><span class="p">(</span><span class="n">faz_fqdn</span><span class="p">,</span> <span class="n">session_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Validate session before use</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">session_id</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">session_id</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid session ID&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Handle session expiration gracefully</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">faz_api_call</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">401</span><span class="p">:</span>
+        <span class="c1"># Session expired, re-authenticate</span>
+        <span class="n">session_id</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">faz_api_call</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Step 3</strong>: Use session_id for <a class="reference internal" href="oauth-authentication-overview.html#step-3-use-session-for-api-calls"><span class="std std-ref">API calls</span></a></p></li>
+<li><p><strong>Step 4</strong>: <a class="reference internal" href="logout-api-user.html"><span class="std std-doc">Logout</span></a> when done</p></li>
+<li><p><strong>Complete Guide</strong>: <a class="reference internal" href="oauth-authentication-overview.html"><span class="std std-doc">OAuth Authentication Overview</span></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Last Updated:</strong> 2025-01-14
+<strong>FAZ Cloud Version:</strong> 7.4.2+
+<strong>Endpoint:</strong> <code class="docutils literal notranslate"><span class="pre">/p/forticloud_jsonrpc_login/</span></code></p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoint-details">Endpoint Details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fqdn-format">FQDN Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-format">Request Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-parameters">Request Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-fields">Response Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-python-example">Complete Python Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-2-step-authentication-flow">Complete 2-Step Authentication Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curl-example">cURL Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postman-example">Postman Example</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setup-environment-variables">Step 1: Setup Environment Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-oauth-token-request">Step 2: OAuth Token Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-get-session-id">Step 3: Get Session ID</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-session-for-api-calls">Using the Session for API Calls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-errors">Common Errors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-access-token">Invalid access_token</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-fqdn">Invalid FQDN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forbidden">403 Forbidden</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssl-certificate-error">SSL Certificate Error</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#session-management">Session Management</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-lifetime">Session Lifetime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-refresh-pattern">Session Refresh Pattern</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-best-practices">Security Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Roland Stierli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Fortinet.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Nov 18, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

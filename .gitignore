@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Postman - Personal environment files with real credentials
+postman/environments/*.postman_environment.json
+!postman/environments/example.postman_environment.json
+
+# Temporary helper scripts and documentation (created during documentation fixes)
+fix_tab_items.py
+fix_broken_links.py
+fix_endpoint_language.py
+DIAGRAMS_TO_CREATE.md
+postman/
+config/project.env
