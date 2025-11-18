@@ -1,16 +1,120 @@
-[//]: # (This section is reserved and must not be updated)
-# Welcome to FAZ_howto_API documentation !
+# FortiAnalyzer API Documentation
 
-## 📖 Access this documentation internally on GitLab pages 
+Comprehensive JSON-RPC API documentation for FortiAnalyzer, providing practical examples and integration guides for automation and development.
 
-Gitlab internal Link: https://support.pages.gitlab.frval.fortinet-emea.com/cse-intl-cmm/FAZ_howto_API
+## 📖 Read the Documentation Online
 
-## ☁ Access the documentation published online:
+**Live Documentation:** https://fortianalyzer-api-docs.readthedocs.io/
 
-AWS Public link: FAZ_howto_API has no public files in AWS Bucket. Use *make upload* to publish content
+The documentation is automatically built and published on Read the Docs with every update.
 
-AWS Public compressed file: FAZ_howto_API has no public zip files in AWS Bucket. Use *make upload* to publish content
+## 🚀 How to Build the HTML Documentation Locally
 
-> You can use this compressed file to feed a FortiPoc/Fabric studio PoC
+### Prerequisites
 
-[//]: # (end of reserverd section)
+#### Linux/macOS with Python 3
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rstierli/fortianalyzer-api-docs.git
+   cd fortianalyzer-api-docs
+   ```
+
+2. **Install Sphinx and dependencies:**
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+3. **Build the HTML documentation:**
+   ```bash
+   cd doc
+   sphinx-build -b html . _build/html
+   ```
+
+4. **Read the HTML documentation:**
+   ```bash
+   # Open in your browser
+   open _build/html/index.html  # macOS
+   xdg-open _build/html/index.html  # Linux
+   ```
+
+The generated HTML files will be in `doc/_build/html/`
+
+## 📚 What's Covered
+
+This documentation provides comprehensive coverage of:
+
+- **Authentication** - Session-based and API key methods
+- **LogView / Log Search** - Two-step search workflow with task IDs
+- **Report Generation** - Asynchronous report creation and retrieval
+- **Device Management** - ADOM, device registration, and fabric operations
+- **FortiView Analytics** - IOC detection, threat analysis, SD-WAN metrics
+- **Event Management** - Event handlers, automation connectors, alerts
+- **System Operations** - Configuration, monitoring, and administration
+
+Each endpoint includes:
+- Complete request/response examples
+- Python code samples with error handling
+- cURL command examples
+- Parameter documentation
+- Best practices and troubleshooting tips
+
+## 🔧 Technology Stack
+
+- **Documentation Framework:** Sphinx with MyST Markdown parser
+- **Theme:** Sphinx Book Theme
+- **Hosting:** Read the Docs
+- **Source Format:** Markdown (.md)
+- **Build System:** Python 3.11+
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find errors, have suggestions, or want to add examples:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Make your changes
+4. Build and test the documentation locally
+5. Submit a pull request
+
+## 📝 Documentation Structure
+
+```
+doc/
+├── docs/
+│   ├── login-and-logout/          # Authentication
+│   ├── logview/                   # Log search operations
+│   ├── reports/                   # Report generation
+│   ├── device-manager/            # Device management
+│   ├── fortiview*/                # FortiView analytics
+│   ├── incidents-events*/         # Event management
+│   └── system-settings/           # System operations
+├── conf.py                        # Sphinx configuration
+└── index.md                       # Documentation homepage
+```
+
+## 🛠 Requirements
+
+Python packages required for building (see `requirements.txt`):
+- sphinx>=7.0.0
+- sphinx-book-theme>=1.0.0
+- myst-parser>=2.0.0
+- sphinx-copybutton>=0.5.2
+- sphinx-design>=0.5.0
+- Additional Sphinx extensions
+
+## 📄 License
+
+This documentation is provided as-is for educational and reference purposes.
+
+## 🔗 Related Resources
+
+- **FortiAnalyzer Documentation:** https://docs.fortinet.com/product/fortianalyzer/
+- **Fortinet Developer Network:** https://fndn.fortinet.net/
+- **FortiManager API Documentation:** https://how-to-fortimanager-api.readthedocs.io/
+
+## ℹ️ About
+
+This documentation project aims to make FortiAnalyzer's JSON-RPC API more accessible through practical examples, clear explanations, and real-world use cases. It complements the official FNDN API reference with how-to guides and integration patterns.
+
+**Note:** This is community-contributed documentation. For official Fortinet documentation, please visit https://docs.fortinet.com/
