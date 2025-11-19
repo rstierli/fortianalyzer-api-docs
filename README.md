@@ -67,16 +67,6 @@ Each endpoint includes:
 - **Source Format:** Markdown (.md)
 - **Build System:** Python 3.11+
 
-## 🤝 Contributing
-
-Contributions are welcome! If you find errors, have suggestions, or want to add examples:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Make your changes
-4. Build and test the documentation locally
-5. Submit a pull request
-
 ## 📝 Documentation Structure
 
 ```
@@ -117,4 +107,4 @@ This documentation is provided as-is for educational and reference purposes.
 
 This documentation project aims to make FortiAnalyzer's JSON-RPC API more accessible through practical examples, clear explanations, and real-world use cases. It complements the official FNDN API reference with how-to guides and integration patterns.
 
-**Note:** This is community-contributed documentation. For official Fortinet documentation, please visit https://docs.fortinet.com/
+**Maintained by Fortinet.** For official Fortinet documentation, please visit https://docs.fortinet.com/

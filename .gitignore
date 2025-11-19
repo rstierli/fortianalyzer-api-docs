@@ -47,3 +47,10 @@ fix_endpoint_language.py
 DIAGRAMS_TO_CREATE.md
 postman/
 config/project.env
+
+# Internal Fortinet files - not for public GitHub
+GITHUB_MIRROR_SETUP.md
+WORKFLOW.md
+.gitlab-ci.yml
+.devcontainer/
+CONTRIBUTING.md
