@@ -166,6 +166,13 @@ docs/pilot/system-status
 docs/pilot/logview-search
 ```
 
+```{toctree}
+:maxdepth: 1
+:caption: About
+
+docs/contributors
+```
+
 ---
 
 ## Documentation Features
