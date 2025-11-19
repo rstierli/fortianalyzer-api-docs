@@ -4,7 +4,7 @@ Comprehensive JSON-RPC API documentation for FortiAnalyzer, providing practical 
 
 ## 📖 Read the Documentation Online
 
-**Live Documentation:** https://fortianalyzer-api-docs.readthedocs.io/
+**Live Documentation:** https://how-to-fortianalyzer-api.readthedocs.io/en/latest/
 
 The documentation is automatically built and published on Read the Docs with every update.
 
