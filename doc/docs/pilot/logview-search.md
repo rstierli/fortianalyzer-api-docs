@@ -678,19 +678,21 @@ SEARCH_RESPONSE=$(curl -k -s -X POST "https://${FAZ_HOST}:${FAZ_PORT}/jsonrpc" \
   -d '{
     "method": "add",
     "params": [{
-      "url": "/logview/adom/'${ADOM}'/logsearch",
+     "apiver": 3,
+     "url": "/logview/adom/'${ADOM}'/logsearch",
       "data": {
-        "device": "All_FortiGate",
+        "device": [{ "devid":"All_FortiGate"}],
         "logtype": "traffic",
         "filter": "srcip==10.0.1.100 and dstport==443",
         "time-range": {"last-n-hours": 24}
       }
     }],
+    "jsonrpc": "2.0"
     "session": "'${SESSION_ID}'",
     "id": 2
   }')
 
-TID=$(echo $SEARCH_RESPONSE | jq -r '.result[0].data.tid')
+TID=$(echo $SEARCH_RESPONSE | jq -r '.result.tid')
 echo "✓ Task ID: $TID"
 echo
 
@@ -713,18 +715,20 @@ while true; do
     -d '{
       "method": "get",
       "params": [{
+        "apiver": 3,
         "url": "/logview/adom/'${ADOM}'/logsearch/'${TID}'"
       }],
+      "jsonrpc": "2.0",
       "session": "'${SESSION_ID}'",
       "id": 3
     }')
   
-  STATUS=$(echo $STATUS_RESPONSE | jq -r '.result[0].data.status')
-  PERCENTAGE=$(echo $STATUS_RESPONSE | jq -r '.result[0].data.percentage')
+  STATUS=$(echo $STATUS_RESPONSE | jq -r '.result.status.message')
+  PERCENTAGE=$(echo $STATUS_RESPONSE | jq -r '.result.percentage')
   
   echo "  Status: $STATUS - ${PERCENTAGE}% complete"
   
-  if [ "$STATUS" = "done" ] && [ "$PERCENTAGE" = "100" ]; then
+  if [ "$STATUS" = "succeeded" ] && [ "$PERCENTAGE" = "100" ]; then
     echo "✓ Search completed"
     break
   fi
@@ -744,18 +748,20 @@ RESULTS=$(curl -k -s -X POST "https://${FAZ_HOST}:${FAZ_PORT}/jsonrpc" \
   -d '{
     "method": "get",
     "params": [{
+      "apiver": 3,
       "url": "/logview/adom/'${ADOM}'/logsearch/'${TID}'",
       "data": {"limit": 100, "offset": 0}
     }],
+    "jsonrpc": "2.0",
     "session": "'${SESSION_ID}'",
     "id": 4
   }')
 
-TOTAL_LOGS=$(echo "$RESULTS" | jq -r '.result[0].data.total_lines')
+TOTAL_LOGS=$(echo "$RESULTS" | jq -r '.result["total-count"]')
 echo "✓ Retrieved logs. Total: $TOTAL_LOGS"
 echo
 echo "Sample logs:"
-echo "$RESULTS" | jq '.result[0].data.logs[0:3]'
+echo "$RESULTS" | jq '.result[0].data'
 
 # Logout
 echo
